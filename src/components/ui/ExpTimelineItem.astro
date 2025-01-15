@@ -1,0 +1,42 @@
+---
+import type { ExpTimeline as Props } from '@/types/i18n.type'
+
+import Card from '@comp/ui/Card.astro'
+import Pill from '@comp/ui/Pill.astro'
+
+const { NAME, WORK, TIME, DESC, DUTIES, PILLS } = Astro.props
+---
+
+<Card as="li" class="ms-6 md:ms-10">
+	<div
+		class="absolute -start-[30px] mt-1.5 h-3 w-3 rounded-full border border-text bg-accent md:-start-[46px]"
+	>
+	</div>
+	<time slot="header" class="text-sm font-normal leading-none text-text">
+		{TIME}
+	</time>
+
+	<h2 class="text-xl font-bold text-title">{NAME}</h2>
+	<h3 class="font-semibold text-accent">{WORK}</h3>
+	<p class="mt-2 max-w-[60ch] text-base text-text">
+		{DESC}
+	</p>
+
+	{
+		Object.entries(DUTIES).map(([_, { LABEL, LIST }]) => (
+			<>
+				<h4 class="font-medium text-title">{LABEL}:</h4>
+
+				<ul class="list-disc text-text marker:text-accent">
+					{LIST.map((item) => (
+						<li class="ms-8">{item}</li>
+					))}
+				</ul>
+			</>
+		))
+	}
+
+	<ul class="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+		{PILLS.map(({ LABEL, ICON }) => <Pill as="li" label={LABEL} icon={`knowledge/${ICON}`} />)}
+	</ul>
+</Card>

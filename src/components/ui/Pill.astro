@@ -1,0 +1,20 @@
+---
+import type { HTMLTag, Polymorphic } from 'astro/types'
+
+import { Icon } from 'astro-icon/components'
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+	as: Tag
+	label: string
+	icon?: string
+}>
+
+const { as: Tag = 'div', label, icon } = Astro.props
+---
+
+<Tag
+	class="inline-flex items-center gap-1.5 rounded-full border border-accent bg-bg-pill/20 px-3 py-1 text-xs font-medium text-accent sm:text-sm"
+>
+	{typeof icon !== 'undefined' && <Icon name={icon} size={16} class="" />}
+	{label}
+</Tag>

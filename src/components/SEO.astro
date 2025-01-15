@@ -1,0 +1,29 @@
+---
+import type { SEOProps as Props } from '@/env'
+
+import rubik from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
+
+const { title, description, url } = Astro.props
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>{title}</title>
+<link rel="preload" as="font" type="font/woff2" href={rubik} crossorigin="anonymous" />
+<link rel="icon" type="image/webp" href="/icon.webp" />
+<meta name="description" content={description} />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content={url} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="/og-image.webp" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="doki-doki-plus-clone.vercel.app" />
+<meta property="twitter:url" content={url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content="/og-image.webp" />

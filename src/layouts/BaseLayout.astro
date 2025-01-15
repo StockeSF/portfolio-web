@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import type { SEOProps } from '@/types/layouts.type'
+
+import '@fontsource-variable/rubik'
+
+import SEO from '@comp/SEO.astro'
+
+interface Props extends SEOProps {
+	mainAttributes?: HTMLAttributes<'main'>
+}
+
+const { currentLocale = 'es' } = Astro
+const { mainAttributes } = Astro.props
+---
+
+<!doctype html>
+<html lang={currentLocale} data-theme="system">
+	<head>
+		<SEO {...Astro.props} />
+	</head>
+	<body>
+		<main {...mainAttributes}>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	@import url('../assets/css/globals.css');
+</style>

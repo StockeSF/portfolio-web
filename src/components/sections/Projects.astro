@@ -1,0 +1,158 @@
+---
+import type { ImageMetadata } from 'astro'
+import type { I18NSection, HomeLangProjects } from '@/types/i18n.type'
+
+import { Picture } from 'astro:assets'
+
+import { Icon } from 'astro-icon/components'
+import ChevronLIcon from '@icons/chevron-left.svg'
+import ChevronRIcon from '@icons/chevron-right.svg'
+import CodeIcon from '@icons/code.svg'
+import ArrowURIcon from '@icons/arrow-up-right.svg'
+
+import SectionLayout from '@/layouts/SectionLayout.astro'
+
+import Card from '@comp/ui/Card.astro'
+import Pill from '@comp/ui/Pill.astro'
+
+type Props = I18NSection<HomeLangProjects>
+
+const { LANG } = Astro.props
+
+const IMAGES = import.meta.glob<{ default: ImageMetadata }>(
+	'/src/assets/projects/*.{jpeg,jpg,png,gif}',
+	{
+		eager: true
+	}
+)
+
+const getIMG = (file: string) => {
+	const keys = Object.keys(IMAGES)
+	const currentIndex = keys.findIndex((img) => img.includes(file))
+
+	if (currentIndex === -1) throw new Error(`No se pudo encontrar la imágen: ${file}`)
+	return IMAGES[keys[currentIndex]].default
+}
+---
+
+<SectionLayout id="projects" title="Proyectos" class="overflow-x-hidden">
+	<div class="embla w-full">
+		<div class="embla__viewport">
+			<ol class="embla__container">
+				{
+					LANG.LIST.map(async (ITEM) => {
+						const IMG = getIMG(ITEM.IMG.FILE)
+
+						return (
+							<Card as="li" class="embla__slide p-2 lg:mx-4" type="y">
+								<Fragment slot="header">
+									<div class="grid grid-cols-6">
+										<div class="col-span-5 flex items-center gap-2 text-title">
+											<CodeIcon size={22} />
+
+											<a
+												href={ITEM.LINKS.PAGE.URL}
+												class="group/title inline-flex items-center gap-1 hover:text-accent"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<h2 class="text-lg font-bold tracking-wide transition-colors">
+													{ITEM.TITLE}
+												</h2>
+												<ArrowURIcon
+													size={22}
+													class="text-accent transition-transform group-hover/title:-translate-y-0.5 group-hover/title:translate-x-1"
+												/>
+											</a>
+										</div>
+
+										<div class="col-span-1 justify-self-center">
+											{typeof ITEM.LINKS.GITHUB !== 'undefined' && (
+												<a
+													href={ITEM.LINKS.GITHUB.URL}
+													class="text-title opacity-80 transition-all hover:scale-110 hover:opacity-100"
+													aria-label={ITEM.LINKS.GITHUB.LABEL}
+													title={ITEM.LINKS.GITHUB.LABEL}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													<Icon name="github" size={24} />
+												</a>
+											)}
+										</div>
+									</div>
+
+									<p class="text-text">{ITEM.DESC}</p>
+
+									<ul class="flex flex-wrap justify-center gap-1.5">
+										{ITEM.PILLS.map(({ LABEL, ICON }) => (
+											<Pill as="li" label={LABEL} icon={`knowledge/${ICON}`} />
+										))}
+									</ul>
+								</Fragment>
+
+								<Picture
+									src={IMG}
+									formats={['avif', 'webp']}
+									pictureAttributes={{ class: 'inline-block size-full' }}
+									class="inline-block aspect-video size-full rounded-xl border border-text"
+									loading="lazy"
+									width={400}
+									height={250}
+									alt={ITEM.IMG.ALTIMG}
+								/>
+							</Card>
+						)
+					})
+				}
+			</ol>
+		</div>
+
+		<button
+			class="embla__prev ms-3 mt-6 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
+		>
+			<ChevronLIcon size={26} />
+		</button>
+		<button
+			class="embla__next ms-3 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
+		>
+			<ChevronRIcon size={26} />
+		</button>
+	</div>
+</SectionLayout>
+
+<style>
+	.embla__container {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 90%;
+		grid-column-gap: 36px;
+	}
+
+	@media screen and (min-width: 640px) {
+		.embla__container {
+			grid-auto-columns: 60%;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		.embla__container {
+			grid-auto-columns: 45%;
+		}
+	}
+</style>
+
+<script>
+	import EmblaCarousel from 'embla-carousel'
+	import { $ } from '@/utils/dom-selector'
+
+	const emblaViewport = $('.embla__viewport') as HTMLElement
+	const options = { loop: false }
+	const prevButtonNode = $('.embla__prev') as HTMLElement
+	const nextButtonNode = $('.embla__next') as HTMLElement
+
+	const embla = EmblaCarousel(emblaViewport, options)
+
+	prevButtonNode.addEventListener('click', () => embla.scrollPrev(), false)
+	nextButtonNode.addEventListener('click', () => embla.scrollNext(), false)
+</script>

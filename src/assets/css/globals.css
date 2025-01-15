@@ -1,0 +1,81 @@
+:root {
+	--accent-color: 2 132 199;
+	--background-color: 255 255 255;
+	--title-color: 15 23 42;
+	--text-color: 71 85 105;
+	--bg-pill-color: 3 105 161;
+	--bg-card-color: 7 89 133;
+}
+
+:root[data-theme='light'] {
+	--accent-color: 2 132 199;
+	--background-color: 255 255 255;
+	--title-color: 15 23 42;
+	--text-color: 71 85 105;
+	--bg-pill-color: 3 105 161;
+	--bg-card-color: 7 89 133;
+}
+
+:root[data-theme='dark'] {
+	--accent-color: 14 165 233;
+	--background-color: 4, 7, 12;
+	--title-color: 255 255 255;
+	--text-color: 203 213 225;
+	--bg-pill-color: 3 105 161;
+	--bg-card-color: 7 89 133;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--accent-color: 14 165 233;
+		--background-color: 4, 7, 12;
+		--title-color: 255 255 255;
+		--text-color: 203 213 225;
+		--bg-pill-color: 3 105 161;
+		--bg-card-color: 7 89 133;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Rubik Variable', sans-serif;
+	display: grid;
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
+	background: rgb(var(--background-color));
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p,
+span {
+	text-wrap: pretty;
+}

@@ -1,0 +1,18 @@
+---
+import type { I18NSection, HomeLangExperience } from '@/types/i18n.type'
+
+import SectionLayout from '@/layouts/SectionLayout.astro'
+
+import TimelineContainer from '@comp/ui/TimelineContainer.astro'
+import ExpTimelineItem from '@comp/ui/ExpTimelineItem.astro'
+
+type Props = I18NSection<HomeLangExperience>
+
+const { LANG } = Astro.props
+---
+
+<SectionLayout id={LANG.ID} title={LANG.TITLE}>
+	<TimelineContainer>
+		{LANG.LIST.map((exp) => <ExpTimelineItem {...exp} PILLS={LANG.PILLS} />)}
+	</TimelineContainer>
+</SectionLayout>
