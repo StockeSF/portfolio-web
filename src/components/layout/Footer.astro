@@ -1,0 +1,14 @@
+---
+import type { I18NSection, LayoutLangFooter } from '@/types/i18n.type'
+
+type Props = I18NSection<LayoutLangFooter>
+
+const { LANG } = Astro.props
+const year = new Date().getFullYear()
+---
+
+<footer>
+	<p class="text-text">
+		{year} · <span set:html={LANG.DESC} />
+	</p>
+</footer>

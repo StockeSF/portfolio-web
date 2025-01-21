@@ -1,17 +1,29 @@
 ---
-import type { SEOProps as Props } from '@/env'
+import type { SEOProps as Props } from '@/types/layouts.type'
 
-import rubik from '@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2?url'
+import { defaultLang } from '@/utils/lang-selector'
+import { filterLang } from '@/utils/lang-utils'
 
+import inter from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
+
+const { currentLocale = 'es' } = Astro
+const otherLangs = filterLang(currentLocale, false)
 const { title, description, url } = Astro.props
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <title>{title}</title>
-<link rel="preload" as="font" type="font/woff2" href={rubik} crossorigin="anonymous" />
+<link rel="preload" as="font" type="font/woff2" href={inter} crossorigin="anonymous" />
 <link rel="icon" type="image/webp" href="/icon.webp" />
 <meta name="description" content={description} />
+
+{
+	Object.entries(otherLangs).map(([key, lang]) => (
+		<link rel="alternate" href={`${Astro.url.origin}/${key}`} hreflang={lang.hreflang} />
+	))
+}
+<link rel="canonical" href={`${Astro.url.origin}/${defaultLang}`} />
 
 <!-- Facebook Meta Tags -->
 <meta property="og:url" content={url} />

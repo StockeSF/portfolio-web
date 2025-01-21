@@ -13,7 +13,7 @@ const { text } = Astro.props
 <email-to-clipboard class="group" data-email={text}>
 	<button
 		id="email-btn"
-		class="inline-flex items-center gap-2 text-text transition-transform active:scale-95"
+		class="inline-flex items-center gap-2 text-sm font-medium text-text transition-transform active:scale-95"
 	>
 		<MailIcon size={16} stroke="currentColor" />
 		<span
@@ -35,7 +35,7 @@ const { text } = Astro.props
 		emailBtn: HTMLElement | null
 		checkIcon: HTMLElement | null
 		myEmail: string
-		timeout: number | null
+		timeout: NodeJS.Timeout | null
 
 		constructor() {
 			super()

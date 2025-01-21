@@ -1,0 +1,54 @@
+---
+import { filterLang, parseUrl } from '@/utils/lang-utils'
+
+import LangIcon from '@icons/language.svg'
+
+import Select from '@comp/ui/Select.astro'
+
+const { currentLocale = 'es' } = Astro
+
+const [currentLang, otherLangs] = [filterLang(currentLocale), filterLang(currentLocale, false)]
+const langFilteredList = Object.assign({}, currentLang, otherLangs)
+
+const getPathname = (code: string) => parseUrl(Astro.url, code).pathname
+---
+
+<lang-container>
+	<Select
+		label={'idioma'}
+		value={getPathname(currentLocale)}
+		options={Object.entries(langFilteredList).map(([code, lang]) => ({
+			LABEL: lang.label,
+			SELECTED: code === currentLocale,
+			VALUE: getPathname(code)
+		}))}
+	>
+		<LangIcon
+			slot="icon"
+			size={22}
+			class="group-hover:text-label absolute text-title transition-colors"
+		/>
+	</Select>
+</lang-container>
+
+<script is:inline>
+	const changeLink = (path) => (window.location.pathname = path)
+
+	class LangContainer extends HTMLElement {
+		constructor() {
+			super()
+
+			this.select = this.querySelector('select')
+			this.options = this.querySelectorAll('option')
+
+			this.select?.addEventListener('change', (e) => {
+				if (e.currentTarget instanceof HTMLSelectElement) {
+					const value = e.currentTarget.value
+					changeLink(value)
+				}
+			})
+		}
+	}
+
+	customElements.define('lang-container', LangContainer)
+</script>

@@ -1,0 +1,35 @@
+---
+import type { I18NSection, HomeLangSkills } from '@/types/i18n.type'
+
+import SectionLayout from '@/layouts/SectionLayout.astro'
+
+import Pill from '@comp/ui/Pill.astro'
+
+type Props = I18NSection<HomeLangSkills>
+
+const { LANG } = Astro.props
+---
+
+<SectionLayout id={LANG.ID} title={LANG.TITLE}>
+	<ol class="flex flex-wrap gap-4">
+		{
+			LANG.LEARNED_TECH_PILLS.map(({ LABEL, ICON }) => (
+				<Pill as="li" label={LABEL} icon={`knowledge/${ICON}`} />
+			))
+		}
+	</ol>
+
+	{
+		LANG.TO_LEARN_TECH_PILLS && (
+			<>
+				<h4 class="mb-4 mt-6 font-medium text-title">{LANG.TO_LEARN_TECH_PILLS.LABEL}:</h4>
+
+				<ol class="flex flex-wrap gap-4">
+					{LANG.TO_LEARN_TECH_PILLS.LIST.map(({ LABEL, ICON }) => (
+						<Pill as="li" label={LABEL} icon={`knowledge/${ICON}`} />
+					))}
+				</ol>
+			</>
+		)
+	}
+</SectionLayout>

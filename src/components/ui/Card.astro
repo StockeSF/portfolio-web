@@ -7,16 +7,20 @@ type Props<Tag extends HTMLTag> = Polymorphic<{
 	type?: 'x' | 'y'
 }>
 
-const { as: Tag, class: className, type = 'x' } = Astro.props
-const baseClasses = {
-	x: 'group w-fit relative grid pb-1 transition-all sm:max-w-[640px] sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/item:opacity-50',
-	y: 'group w-full relative grid grid-rows-10 py-2 transition-all min-h-[480px] max-h-[480px]'
+const { as: Tag, class: className, type = 'x', ...rest } = Astro.props
+
+const baseClasses =
+	'group relative grid transition-all lg:hover:!opacity-100 lg:group-hover/item:opacity-50'
+
+const typeClasses = {
+	x: 'w-fit pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4',
+	y: 'w-full grid-rows-12 min-h-[480px] max-h-[480px]'
 }
 
-const classes = [[baseClasses[type as keyof typeof baseClasses], className]]
+const classes = [[typeClasses[type as keyof typeof typeClasses], baseClasses, className]]
 ---
 
-<Tag class:list={classes}>
+<Tag class:list={classes} {...rest}>
 	<div
 		class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition-all lg:-inset-x-4 lg:block lg:group-hover:bg-bg-card/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(14,165,233,0.1)] lg:group-hover:drop-shadow-lg"
 	>
@@ -24,15 +28,21 @@ const classes = [[baseClasses[type as keyof typeof baseClasses], className]]
 
 	<header
 		class:list={[
-			'z-10 pt-1',
-			{ 'sm:col-span-2': type === 'x' },
-			{ 'row-span-6 space-y-4': type === 'y' }
+			'text-label z-10 text-xs font-semibold uppercase leading-none tracking-wide',
+			{ 'pt-1.5 sm:col-span-2': type === 'x' },
+			{ 'row-span-1': type === 'x' }
 		]}
 	>
 		<slot name="header" />
 	</header>
 
-	<div class:list={['z-10', { 'sm:col-span-6': type === 'x' }, { 'row-span-4': type === 'y' }]}>
+	<div
+		class:list={[
+			'z-10',
+			{ 'sm:col-span-6': type === 'x' },
+			{ 'row-span-11 flex flex-col justify-between gap-2': type === 'y' }
+		]}
+	>
 		<slot />
 	</div>
 </Tag>

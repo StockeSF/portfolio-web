@@ -1,46 +1,23 @@
 ---
-import { Picture } from 'astro:assets'
 import { langSelector } from '@/utils/lang-selector'
 import { labels } from '@/i18n/home/config'
 
-import banner from '@/assets/banner.png'
-
 import BaseLayout from '@/layouts/BaseLayout.astro'
 
-import Profile from '@comp/sections/Profile.astro'
+import About from '@comp/sections/About.astro'
+import Education from '@comp/sections/Education.astro'
 import Experience from '@comp/sections/Experience.astro'
 import Projects from '@comp/sections/Projects.astro'
+import Skills from '@comp/sections/Skills.astro'
 
 const { currentLocale = 'es' } = Astro
-const { SEO, PROFILE, EXP, PROJ } = langSelector({ currentLocale, labels })
+const { SEO, EXP, PROJ, EDU, SKL } = langSelector({ currentLocale, labels })
 ---
 
-<BaseLayout
-	title=`${SEO.TITLE_1} | ${SEO.TITLE_2}`
-	description={SEO.DESC}
-	url={SEO.URL}
-	mainAttributes={{
-		class: 'grid gap-12 min-h-screen mx-auto max-w-screen-2xl lg:grid-cols-6 xl:gap-24'
-	}}
->
-	<div
-		class="fixed inset-0 -z-10 size-full overflow-hidden bg-inherit bg-[linear-gradient(to_right,rgb(var(--text-color)_/_0.075)_1px,transparent_1px),linear-gradient(to_bottom,rgb(var(--text-color)_/_0.075)_1px,transparent_1px)] bg-[size:18px_24px] after:absolute after:-top-3/4 after:bottom-0 after:left-0 after:right-0 after:bg-[radial-gradient(circle_500px_at_50%_200px,rgb(var(--primary-color)),transparent)] after:md:-right-3/4 after:md:-top-20"
-	>
-		<Picture
-			src={banner}
-			formats={['avif', 'webp']}
-			quality={100}
-			fetchpriority="high"
-			pictureAttributes={{ class: 'w-full grid' }}
-			class="fixed -right-6 bottom-0 z-10 h-full w-[40%] object-cover opacity-10 blur-sm grayscale lg:translate-x-6"
-			alt=""
-		/>
-	</div>
-
-	<Profile LANG={PROFILE} />
-
-	<section class="relative grid gap-20 lg:col-span-4 lg:py-16 lg:pe-14">
-		<Experience LANG={EXP} />
-		<Projects LANG={PROJ} />
-	</section>
+<BaseLayout title=`${SEO.TITLE_1} · ${SEO.TITLE_2}` description={SEO.DESC} url={SEO.URL}>
+	<About />
+	<Experience LANG={EXP} />
+	<Projects LANG={PROJ} />
+	<Education LANG={EDU} />
+	<Skills LANG={SKL} />
 </BaseLayout>

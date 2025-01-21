@@ -1,270 +1,330 @@
 {
-  "SEO": {
-    "TITLE_1": "Frank Contreras",
-    "TITLE_2": "Porfolio",
-    "DESC": "Porfolio web de Frank Contreras, desarrollador web Front End.",
-    "URL": "https://frankcff.netlify.app/"
-  },
-  "PROFILE": {
-    "NAME": "Frank Contreras",
-    "LABEL": "Desarrollador Web Front-End",
-    "DESC": "Técnico Superior Universitario en Informática. Especializado en el desarrollo de páginas dinámicas y responsive.",
-    "LOCATION": ["Caracas", "Venezuela"],
-    "EMAIL": "fonseca.fr2709@gmail.com",
-    "ACCOUNTS": [
-      {
-        "ICON": "mail",
-        "NAME": "Email",
-        "LABEL": "Contáctame por correo",
-        "URL": "mailto:"
-      },
-      {
-        "ICON": "brand-github",
-        "NAME": "Github",
-        "LABEL": "Mi cuenta de Github",
-        "URL": "https://github.com/StockeSF"
-      },
-      {
-        "ICON": "brand-linkedin",
-        "NAME": "LinkedIn",
-        "LABEL": "Mi cuenta de LinkedIn",
-        "URL": "https://www.linkedin.com/in/frank-contreras-67622a292/"
-      }
-    ]
-  },
-  "EXPERIENCE": {
-    "ID": "experience",
-    "TITLE": "Experiencia",
-    "LIST": [
-      {
-        "NAME": "Instituto Municipal de Crédito Popular",
-        "WORK": "Analista Programador Junior",
-        "TIME": "Jul. 2022 - Feb. 2023",
-        "DESC": "",
-        "DUTIES": {
-          "RESPONSIBILITIES": {
-            "LABEL": "Responsabilidades",
-            "LIST": [
-              "Optimizar aplicativos internos de la institución, reduciendo errores y añadiendo mejoras en la interfaz de las mismas."
-            ]
-          },
-          "ACHIEVEMENTS": {
-            "LABEL": "Logros",
-            "LIST": [
-              "Desarrollé una página web provisional para mejorar la visibilidad de la institución.",
-              "Diseñé un sistema de control de asistencia para actualizar el sistema ya existente dentro de la institución."
-            ]
-          }
-        }
-      }
-    ],
-    "PILLS": [
-      {
-        "LABEL": "HTML",
-        "ICON": "html5"
-      },
-      {
-        "LABEL": "CSS",
-        "ICON": "css"
-      },
-      {
-        "LABEL": "JavaScript",
-        "ICON": "javascript"
-      },
-      {
-        "LABEL": "React",
-        "ICON": "react"
-      },
-      {
-        "LABEL": "PHP",
-        "ICON": "php"
-      }
-    ]
-  },
-  "PROJECTS": {
-    "TITLE": "Proyectos",
-    "SUBTITLE": {
-      "MAIN": "Algunos de mis proyectos.",
-      "EXTENDED": "puedes encontrar más",
-      "EXTENDED_LINK": "aquí"
-    },
-    "LIST": [
-      {
-        "TITLE": "Página del I.M.C.P.",
-        "DESC": "Página provisional realizada durante mi estancia en el I.M.C.P; Creado desde cero con React.",
-        "CATEGORY": "Profesional",
-        "IMG": {
-          "FILE": "imcp.jpg",
-          "ALTIMG": "Imágen de la página web"
-        },
-        "LINKS": {
-          "PAGE": {
-            "URL": "https://imcp-page.netlify.app/",
-            "LABEL": "Página del proyecto."
-          },
-          "GITHUB": {
-            "URL": "https://github.com/StockeSF/IMCP",
-            "LABEL": "Página de Github."
-          }
-        },
-        "PILLS": [
-          {
-            "LABEL": "HTML",
-            "ICON": "html5"
-          },
-          {
-            "LABEL": "CSS",
-            "ICON": "css"
-          },
-          {
-            "LABEL": "JavaScript",
-            "ICON": "javascript"
-          },
-          {
-            "LABEL": "React",
-            "ICON": "react"
-          }
-        ]
-      },
-      {
-        "TITLE": "DDLC Plus! (Clon)",
-        "DESC": "Clon de la página Doki Doki Literature Club Plus! hecho desde cero con Svelte y Astro, con mejoras en rendimiento con respecto al original.",
-        "CATEGORY": "Personal",
-        "IMG": {
-          "FILE": "doki.jpg",
-          "ALTIMG": "Imágen de la página web"
-        },
-        "LINKS": {
-          "PAGE": {
-            "URL": "https://doki-doki-plus-clone.vercel.app/",
-            "LABEL": "Página del proyecto."
-          },
-          "GITHUB": {
-            "URL": "https://github.com/StockeSF/DokiDokiPlus-Clone",
-            "LABEL": "Página de Github."
-          }
-        },
-        "PILLS": [
-          {
-            "LABEL": "HTML",
-            "ICON": "html5"
-          },
-          {
-            "LABEL": "CSS",
-            "ICON": "css"
-          },
-          {
-            "LABEL": "TailwindCSS",
-            "ICON": "tailwindcss"
-          },
-          {
-            "LABEL": "JavaScript",
-            "ICON": "javascript"
-          },
-          {
-            "LABEL": "TypeScript",
-            "ICON": "typescript"
-          },
-          {
-            "LABEL": "Astro",
-            "ICON": "astro"
-          },
-          {
-            "LABEL": "Svelte",
-            "ICON": "svelte"
-          }
-        ]
-      },
-      {
-        "TITLE": "Pokédex Pokémon",
-        "DESC": "Página con la que puede buscar Pokemons, haciendo uso de la API llamada PokeAPI. Creado desde cero con Next.js y React.",
-        "CATEGORY": "Personal",
-        "IMG": {
-          "FILE": "pokedex.jpg",
-          "ALTIMG": "Imágen de la página web"
-        },
-        "LINKS": {
-          "PAGE": {
-            "URL": "https://pokedex-pokemon-five.vercel.app/",
-            "LABEL": "Página del proyecto."
-          },
-          "GITHUB": {
-            "URL": "https://github.com/StockeSF/Pokedex-Pokemon",
-            "LABEL": "Página de Github."
-          }
-        },
-        "PILLS": [
-          {
-            "LABEL": "HTML",
-            "ICON": "html5"
-          },
-          {
-            "LABEL": "CSS",
-            "ICON": "css"
-          },
-          {
-            "LABEL": "JavaScript",
-            "ICON": "javascript"
-          },
-          {
-            "LABEL": "TypeScript",
-            "ICON": "typescript"
-          },
-          {
-            "LABEL": "React",
-            "ICON": "react"
-          },
-          {
-            "LABEL": "Next.js",
-            "ICON": "nextdotjs"
-          }
-        ]
-      },
-      {
-        "TITLE": "Pokédex Pokémon",
-        "DESC": "Página con la que puede buscar Pokemons, haciendo uso de la API llamada PokeAPI. Creado desde cero con Next.js y React.",
-        "CATEGORY": "Personal",
-        "IMG": {
-          "FILE": "pokedex.jpg",
-          "ALTIMG": "Imágen de la página web"
-        },
-        "LINKS": {
-          "PAGE": {
-            "URL": "https://pokedex-pokemon-five.vercel.app/",
-            "LABEL": "Página del proyecto."
-          },
-          "GITHUB": {
-            "URL": "https://github.com/StockeSF/Pokedex-Pokemon",
-            "LABEL": "Página de Github."
-          }
-        },
-        "PILLS": [
-          {
-            "LABEL": "HTML",
-            "ICON": "html5"
-          },
-          {
-            "LABEL": "CSS",
-            "ICON": "css"
-          },
-          {
-            "LABEL": "JavaScript",
-            "ICON": "javascript"
-          },
-          {
-            "LABEL": "TypeScript",
-            "ICON": "typescript"
-          },
-          {
-            "LABEL": "React",
-            "ICON": "react"
-          },
-          {
-            "LABEL": "Next.js",
-            "ICON": "nextdotjs"
-          }
-        ]
-      }
-    ]
-  }
+	"SEO": {
+		"TITLE_1": "Frank Contreras",
+		"TITLE_2": "Porfolio",
+		"DESC": "Porfolio web de Frank Contreras, desarrollador web Front End.",
+		"URL": "https://frankcff.netlify.app/"
+	},
+	"EXPERIENCE": {
+		"ID": "experience",
+		"TITLE": "Experiencia",
+		"LIST": [
+			{
+				"NAME": "Instituto Municipal de Crédito Popular",
+				"WORK": "Analista Programador Junior",
+				"TIME": "Jul. 2022 - Feb. 2023",
+				"DUTIES": {
+					"RESPONSIBILITIES": {
+						"LABEL": "Responsabilidades",
+						"LIST": [
+							"Optimizar aplicativos internos de la institución, reduciendo errores y añadiendo mejoras en la interfaz de las mismas."
+						]
+					},
+					"ACHIEVEMENTS": {
+						"LABEL": "Logros",
+						"LIST": [
+							"Desarrollé una página web provisional para mejorar la visibilidad de la institución.",
+							"Diseñé un sistema de control de asistencia para actualizar el sistema ya existente dentro de la institución."
+						]
+					}
+				}
+			}
+		],
+		"PILLS": [
+			{
+				"LABEL": "HTML"
+			},
+			{
+				"LABEL": "CSS"
+			},
+			{
+				"LABEL": "JavaScript"
+			},
+			{
+				"LABEL": "React"
+			},
+			{
+				"LABEL": "PHP"
+			}
+		]
+	},
+	"PROJECTS": {
+		"ID": "proyectos",
+		"TITLE": "Proyectos",
+		"SUBTITLE": {
+			"MAIN": "Algunos de mis proyectos.",
+			"EXTENDED": "puedes encontrar más",
+			"EXTENDED_LINK": "aquí"
+		},
+		"LIST": [
+			{
+				"TITLE": "Página del I.M.C.P.",
+				"DESC": "Página provisional realizada durante mi estancia en el I.M.C.P; Creado desde cero con React.",
+				"CATEGORY": "Profesional",
+				"IMG": {
+					"FILE": "imcp.jpg",
+					"ALTIMG": "Imágen de la página web"
+				},
+				"LINKS": {
+					"PAGE": {
+						"URL": "https://pagina-imcp.netlify.app/",
+						"LABEL": "Página del proyecto."
+					},
+					"GITHUB": {
+						"URL": "https://github.com/StockeSF/IMCP",
+						"LABEL": "Página de Github."
+					}
+				},
+				"PILLS": [
+					{
+						"LABEL": "HTML",
+						"ICON": "html5"
+					},
+					{
+						"LABEL": "CSS",
+						"ICON": "css"
+					},
+					{
+						"LABEL": "JavaScript",
+						"ICON": "javascript"
+					},
+					{
+						"LABEL": "React",
+						"ICON": "react"
+					}
+				]
+			},
+			{
+				"TITLE": "DDLC Plus! (Clon)",
+				"DESC": "Clon de la página Doki Doki Literature Club Plus! hecho desde cero con Svelte y Astro, con mejoras en rendimiento con respecto al original.",
+				"CATEGORY": "Personal",
+				"IMG": {
+					"FILE": "doki.jpg",
+					"ALTIMG": "Imágen de la página web"
+				},
+				"LINKS": {
+					"PAGE": {
+						"URL": "https://doki-doki-plus-clone.vercel.app/",
+						"LABEL": "Página del proyecto."
+					},
+					"GITHUB": {
+						"URL": "https://github.com/StockeSF/DokiDokiPlus-Clone",
+						"LABEL": "Página de Github."
+					}
+				},
+				"PILLS": [
+					{
+						"LABEL": "HTML",
+						"ICON": "html5"
+					},
+					{
+						"LABEL": "CSS",
+						"ICON": "css"
+					},
+					{
+						"LABEL": "Tailwind",
+						"ICON": "tailwindcss"
+					},
+					{
+						"LABEL": "JavaScript",
+						"ICON": "javascript"
+					},
+					{
+						"LABEL": "TypeScript",
+						"ICON": "typescript"
+					},
+					{
+						"LABEL": "Astro",
+						"ICON": "astro"
+					},
+					{
+						"LABEL": "Svelte",
+						"ICON": "svelte"
+					}
+				]
+			},
+			{
+				"TITLE": "Pokédex Pokémon",
+				"DESC": "Página con la que puede buscar Pokemons, haciendo uso de la API llamada PokeAPI. Creado desde cero con Next.js y React.",
+				"CATEGORY": "Personal",
+				"IMG": {
+					"FILE": "pokedex.jpg",
+					"ALTIMG": "Imágen de la página web"
+				},
+				"LINKS": {
+					"PAGE": {
+						"URL": "https://pokedex-pokemon-five.vercel.app/",
+						"LABEL": "Página del proyecto."
+					},
+					"GITHUB": {
+						"URL": "https://github.com/StockeSF/Pokedex-Pokemon",
+						"LABEL": "Página de Github."
+					}
+				},
+				"PILLS": [
+					{
+						"LABEL": "HTML",
+						"ICON": "html5"
+					},
+					{
+						"LABEL": "CSS",
+						"ICON": "css"
+					},
+					{
+						"LABEL": "JavaScript",
+						"ICON": "javascript"
+					},
+					{
+						"LABEL": "TypeScript",
+						"ICON": "typescript"
+					},
+					{
+						"LABEL": "React",
+						"ICON": "react"
+					},
+					{
+						"LABEL": "Next.js",
+						"ICON": "nextdotjs"
+					}
+				]
+			},
+			{
+				"TITLE": "Pokédex Pokémon",
+				"DESC": "Página con la que puede buscar Pokemons, haciendo uso de la API llamada PokeAPI. Creado desde cero con Next.js y React.",
+				"CATEGORY": "Personal",
+				"IMG": {
+					"FILE": "pokedex.jpg",
+					"ALTIMG": "Imágen de la página web"
+				},
+				"LINKS": {
+					"PAGE": {
+						"URL": "https://pokedex-pokemon-five.vercel.app/",
+						"LABEL": "Página del proyecto."
+					},
+					"GITHUB": {
+						"URL": "https://github.com/StockeSF/Pokedex-Pokemon",
+						"LABEL": "Página de Github."
+					}
+				},
+				"PILLS": [
+					{
+						"LABEL": "HTML",
+						"ICON": "html5"
+					},
+					{
+						"LABEL": "CSS",
+						"ICON": "css"
+					},
+					{
+						"LABEL": "JavaScript",
+						"ICON": "javascript"
+					},
+					{
+						"LABEL": "TypeScript",
+						"ICON": "typescript"
+					},
+					{
+						"LABEL": "React",
+						"ICON": "react"
+					},
+					{
+						"LABEL": "Next.js",
+						"ICON": "nextdotjs"
+					}
+				]
+			}
+		]
+	},
+	"EDUCATION": {
+		"ID": "educacion",
+		"TITLE": "Educación",
+		"LIST": [
+			{
+				"ICON": "book-2",
+				"TITLE": "Inglés Avanzado (C1)",
+				"SUBTITLE": "Instituto Oxford Venezuela",
+				"TIME": "Agosto 2023 - Agosto 2024",
+				"LATEST": true
+			},
+			{
+				"ICON": "school",
+				"TITLE": "T.S.U. en Informática",
+				"SUBTITLE": "instituto Universitario en Mercadotecnia",
+				"TIME": "Agosto 2023 - Julio 2023"
+			},
+			{
+				"ICON": "book-2",
+				"TITLE": "Técnico en Reparación de Micros",
+				"SUBTITLE": "Instituto Luisa Cáceres de Arismendi",
+				"TIME": "Septiembre 2019"
+			}
+		]
+	},
+	"SKILLS": {
+		"ID": "tecnologias",
+		"TITLE": "Tecnologias",
+		"LEARNED_TECH_PILLS": [
+			{
+				"LABEL": "HTML",
+				"ICON": "html5"
+			},
+			{
+				"LABEL": "CSS",
+				"ICON": "css"
+			},
+			{
+				"LABEL": "Tailwind CSS",
+				"ICON": "tailwindcss"
+			},
+			{
+				"LABEL": "JavaScript",
+				"ICON": "javascript"
+			},
+			{
+				"LABEL": "TypeScript",
+				"ICON": "typescript"
+			},
+			{
+				"LABEL": "React",
+				"ICON": "react"
+			},
+			{
+				"LABEL": "Vue.js",
+				"ICON": "vuedotjs"
+			},
+			{
+				"LABEL": "Svelte",
+				"ICON": "svelte"
+			},
+			{
+				"LABEL": "Astro",
+				"ICON": "astro"
+			},
+			{
+				"LABEL": "PHP",
+				"ICON": "php"
+			},
+			{
+				"LABEL": "Git",
+				"ICON": "git"
+			}
+		],
+		"TO_LEARN_TECH_PILLS": {
+			"LABEL": "En estudio",
+			"LIST": [
+				{
+					"LABEL": "Laravel",
+					"ICON": "laravel"
+				},
+				{
+					"LABEL": "Python",
+					"ICON": "python"
+				},
+				{
+					"LABEL": "Django",
+					"ICON": "django"
+				}
+			]
+		}
+	}
 }
