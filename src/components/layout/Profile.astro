@@ -18,7 +18,7 @@ const { LANG } = Astro.props
 ---
 
 <header
-	class="flex w-full flex-col justify-between py-16 ps-8 sm:w-fit lg:sticky lg:top-0 lg:col-span-2 lg:max-h-screen lg:ps-14"
+	class="flex w-full flex-col justify-between px-6 py-16 sm:w-fit lg:sticky lg:top-0 lg:col-span-2 lg:max-h-screen lg:ps-14"
 >
 	<article class="w-full space-y-3">
 		<header class="text-start">
@@ -30,7 +30,7 @@ const { LANG } = Astro.props
 				loading="eager"
 				width={120}
 				height={120}
-				alt=""
+				alt={LANG.IMGALT}
 			/>
 
 			<h1 class="mt-7 text-3xl font-bold text-title">{LANG.NAME}</h1>
@@ -43,9 +43,9 @@ const { LANG } = Astro.props
 				<LocationIcon size={16} />
 				{LANG.LOCATION.join(', ')}.
 			</div>
-	
+
 			<EmailBtn text={LANG.EMAIL} />
-	
+
 			<ul class="inline-flex items-center gap-2">
 				{
 					LANG.ACCOUNTS.map(({ LABEL, NAME, URL, ICON }) => (
@@ -67,8 +67,8 @@ const { LANG } = Astro.props
 		</div>
 	</article>
 
-	<footer class="flex gap-4">
+	<footer class="mt-4 flex gap-4 lg:mt-0">
 		<ThemeSelector {...LANG.FOOTER.THEMEPROVIDER} />
-		<LangSelector />
+		<LangSelector {...LANG.FOOTER.LANGSELECTOR} />
 	</footer>
 </header>

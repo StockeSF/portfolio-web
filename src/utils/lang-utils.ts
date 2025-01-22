@@ -1,31 +1,29 @@
 import { languageList, defaultLang } from './lang-selector'
 
-const parseLang = (lang: string) => (
-  lang in languageList ? lang : defaultLang
-)
+const langKeys = Object.keys(languageList)
 
-const stripTrailingSlash = (url: string) => {
-  if (url[url.length - 1] === '/') url = url.slice(0, -1)
-  return url
-}
+const parseLang = (lang: string) => (langKeys.includes(lang) ? lang : defaultLang)
 
 export const filterLang = (locale: string, equal = true) => {
-	const obj = Object.entries(languageList)
-		.filter(([key, _]) => equal ? key === locale : key !== locale)
+	const obj = Object.entries(languageList).filter(([key, _]) =>
+		equal ? key === locale : key !== locale
+	)
 
 	return Object.fromEntries(obj)
 }
 
 export const parseUrl = (url: URL, locale: string) => {
-  url = new URL(url)
+	url = new URL(url)
 
-  const [_, baseSegment] = url.pathname.split('/')
+	const [_, baseSegment] = url.pathname.split('/')
 
-  if (baseSegment) {
-    url.pathname = url.pathname.replace(baseSegment, locale)
-  } else {
-    url.pathname = url.pathname.replace('/' + baseSegment, '')
-  }
+	const parsedLocale = parseLang(locale)
 
-  return url
+	if (baseSegment) {
+		url.pathname = url.pathname.replace(baseSegment, parsedLocale)
+	} else {
+		url.pathname = url.pathname.replace('/' + baseSegment, '')
+	}
+
+	return url
 }

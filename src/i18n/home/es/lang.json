@@ -2,11 +2,20 @@
 	"SEO": {
 		"TITLE_1": "Frank Contreras",
 		"TITLE_2": "Porfolio",
-		"DESC": "Porfolio web de Frank Contreras, desarrollador web Front End.",
-		"URL": "https://frankcff.netlify.app/"
+		"DESC": "Porfolio web de Frank Contreras, desarrollador web Front End."
+	},
+	"ABOUT": {
+		"ID": "sobremi",
+		"TITLE": "Sobre mí",
+		"DESC": [
+			"Soy un desarrollador 🧑‍💻 con el titulo de Técnico Superior Universitario en Informática por parte del Instituto Universitario de Mercadotecnia (I.S.U.M.), que cuenta con medio año de experiencia en el campo del desarrollo web Front-End.",
+			"Durante mi experiencia laboral, la cual me ha dado buenos resultados, de acuerdo a la opinión de los interesados; realicé mantenimiento a aplicativos de la institución, así como el desarrollo de una página web transitiva para la empresa donde me encontraba, la cuál estuvo en producción durante varios meses 😁.",
+			"Tengo conocimientos amplios y prácticos en los lenguajes de la web y frameworks de este, y actualmente me encuentro estudiando Python para ampliar mis conocimientos al desarrollo Back-End, y hace unos meses me gradué en Inglés C1 🎓.",
+			"Soy un gran apasionado de la tecnología y de nuevas experiencias, me encantan los videojuegos y las computadores en general. ¡Gracias por pasar por aquí! 🫡."
+		]
 	},
 	"EXPERIENCE": {
-		"ID": "experience",
+		"ID": "experiencia",
 		"TITLE": "Experiencia",
 		"LIST": [
 			{
@@ -53,8 +62,7 @@
 		"TITLE": "Proyectos",
 		"SUBTITLE": {
 			"MAIN": "Algunos de mis proyectos.",
-			"EXTENDED": "puedes encontrar más",
-			"EXTENDED_LINK": "aquí"
+			"EXTENDED": "puedes encontrar más aquí"
 		},
 		"LIST": [
 			{
@@ -69,10 +77,6 @@
 					"PAGE": {
 						"URL": "https://pagina-imcp.netlify.app/",
 						"LABEL": "Página del proyecto."
-					},
-					"GITHUB": {
-						"URL": "https://github.com/StockeSF/IMCP",
-						"LABEL": "Página de Github."
 					}
 				},
 				"PILLS": [
@@ -96,7 +100,7 @@
 			},
 			{
 				"TITLE": "DDLC Plus! (Clon)",
-				"DESC": "Clon de la página Doki Doki Literature Club Plus! hecho desde cero con Svelte y Astro, con mejoras en rendimiento con respecto al original.",
+				"DESC": "Clon de la página Doki Doki Literature Club Plus! hecho desde cero con Astro y Svelte, con mejoras en rendimiento.",
 				"CATEGORY": "Personal",
 				"IMG": {
 					"FILE": "doki.jpg",
@@ -189,20 +193,20 @@
 				]
 			},
 			{
-				"TITLE": "Pokédex Pokémon",
-				"DESC": "Página con la que puede buscar Pokemons, haciendo uso de la API llamada PokeAPI. Creado desde cero con Next.js y React.",
+				"TITLE": "Tres en raya",
+				"DESC": "Página web en la cual se puede jugar el clásico Tres en raya. Creado desde cero con React.",
 				"CATEGORY": "Personal",
 				"IMG": {
-					"FILE": "pokedex.jpg",
+					"FILE": "tictactoe.png",
 					"ALTIMG": "Imágen de la página web"
 				},
 				"LINKS": {
 					"PAGE": {
-						"URL": "https://pokedex-pokemon-five.vercel.app/",
+						"URL": "https://frankcff-tictactoe.netlify.app/",
 						"LABEL": "Página del proyecto."
 					},
 					"GITHUB": {
-						"URL": "https://github.com/StockeSF/Pokedex-Pokemon",
+						"URL": "https://github.com/StockeSF/tres-en-raya",
 						"LABEL": "Página de Github."
 					}
 				},
@@ -226,10 +230,6 @@
 					{
 						"LABEL": "React",
 						"ICON": "react"
-					},
-					{
-						"LABEL": "Next.js",
-						"ICON": "nextdotjs"
 					}
 				]
 			}
@@ -238,6 +238,7 @@
 	"EDUCATION": {
 		"ID": "educacion",
 		"TITLE": "Educación",
+		"LATEST_TEXT": "Lo último",
 		"LIST": [
 			{
 				"ICON": "book-2",
@@ -249,8 +250,8 @@
 			{
 				"ICON": "school",
 				"TITLE": "T.S.U. en Informática",
-				"SUBTITLE": "instituto Universitario en Mercadotecnia",
-				"TIME": "Agosto 2023 - Julio 2023"
+				"SUBTITLE": "Instituto Universitario en Mercadotecnia",
+				"TIME": "Septiembre 2020 - Julio 2023"
 			},
 			{
 				"ICON": "book-2",

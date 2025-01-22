@@ -1,5 +1,5 @@
 ---
-import type { LayoutLangThemeProvider as Props } from '@/types/layouts.type'
+import type { LayoutLangThemeProvider as Props } from '@/types/i18n.type'
 
 import SunMoonIcon from '@icons/sun-moon.svg'
 
@@ -21,7 +21,7 @@ const listKeys = Object.keys(OPTIONS)
 		<SunMoonIcon
 			slot="icon"
 			size={22}
-			class="group-hover:text-label absolute text-title transition-colors"
+			class="absolute text-title transition-colors group-hover:text-label"
 		/>
 	</Select>
 </theme-container>

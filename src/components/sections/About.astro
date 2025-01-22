@@ -1,10 +1,20 @@
-<p class="text-lg text-text">
-	Soy un desarrollador, con el título de Técnico Superior Universitario en Informática, por el
-	Instituto Universitario de Mercadotecnia. Actualmente cuento con un año de experiencia en el campo
-	del desarrollo web, más específicamente, del lado del Front-End. Durante mi experiencia laboral,
-	la cual me ha dado buenos resultados, de acuerdo a la opinión de los interesados; desarrollé una
-	página web transitiva para la empresa donde me encontraba, la cuál estuvo en producción durante
-	varios meses. Tengo conocimientos amplios y prácticos en los lenguajes de la web y frameworks de
-	este, los cuales se pueden observar en la siguiente sección. Actualmente me encuentro estudiando
-	PHP para ampliar mis conocimientos al desarrollo Back-End, y recientemente me gradué en Inglés C1.
-</p>
+---
+import type { I18NSection, HomeLangAbout } from '@/types/i18n.type'
+
+type Props = I18NSection<HomeLangAbout>
+
+import SectionLayout from '@/layouts/SectionLayout.astro'
+
+const { LANG } = Astro.props
+---
+
+<SectionLayout id={LANG.ID} title={LANG.TITLE}>
+	{
+		LANG.DESC.map((txt, i) => (
+			<p
+				class:list={['text-base leading-normal text-text', { 'mb-6': i !== LANG.DESC.length - 1 }]}
+				set:html={txt}
+			/>
+		))
+	}
+</SectionLayout>

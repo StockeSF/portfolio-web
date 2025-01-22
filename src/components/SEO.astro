@@ -1,14 +1,13 @@
 ---
 import type { SEOProps as Props } from '@/types/layouts.type'
 
-import { defaultLang } from '@/utils/lang-selector'
-import { filterLang } from '@/utils/lang-utils'
+import { languageList, defaultLang } from '@/utils/lang-selector'
+
+import { ClientRouter } from 'astro:transitions'
 
 import inter from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
 
-const { currentLocale = 'es' } = Astro
-const otherLangs = filterLang(currentLocale, false)
-const { title, description, url } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <meta charset="UTF-8" />
@@ -18,15 +17,17 @@ const { title, description, url } = Astro.props
 <link rel="icon" type="image/webp" href="/icon.webp" />
 <meta name="description" content={description} />
 
+<link rel="canonical" href={`${Astro.url.origin}/${defaultLang}`} />
 {
-	Object.entries(otherLangs).map(([key, lang]) => (
+	Object.entries(languageList).map(([key, lang]) => (
 		<link rel="alternate" href={`${Astro.url.origin}/${key}`} hreflang={lang.hreflang} />
 	))
 }
-<link rel="canonical" href={`${Astro.url.origin}/${defaultLang}`} />
+
+<ClientRouter />
 
 <!-- Facebook Meta Tags -->
-<meta property="og:url" content={url} />
+<meta property="og:url" content={Astro.url} />
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
@@ -34,8 +35,8 @@ const { title, description, url } = Astro.props
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:domain" content="doki-doki-plus-clone.vercel.app" />
-<meta property="twitter:url" content={url} />
+<meta property="twitter:domain" content={Astro.url.origin} />
+<meta property="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content="/og-image.webp" />

@@ -1,4 +1,6 @@
 ---
+import type { LayoutLangLangSelector as Props } from '@/types/i18n.type'
+
 import { filterLang, parseUrl } from '@/utils/lang-utils'
 
 import LangIcon from '@icons/language.svg'
@@ -11,11 +13,13 @@ const [currentLang, otherLangs] = [filterLang(currentLocale), filterLang(current
 const langFilteredList = Object.assign({}, currentLang, otherLangs)
 
 const getPathname = (code: string) => parseUrl(Astro.url, code).pathname
+
+const { LABEL } = Astro.props
 ---
 
 <lang-container>
 	<Select
-		label={'idioma'}
+		label={LABEL}
 		value={getPathname(currentLocale)}
 		options={Object.entries(langFilteredList).map(([code, lang]) => ({
 			LABEL: lang.label,
@@ -26,7 +30,7 @@ const getPathname = (code: string) => parseUrl(Astro.url, code).pathname
 		<LangIcon
 			slot="icon"
 			size={22}
-			class="group-hover:text-label absolute text-title transition-colors"
+			class="absolute text-title transition-colors group-hover:text-label"
 		/>
 	</Select>
 </lang-container>

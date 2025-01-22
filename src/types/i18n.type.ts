@@ -6,10 +6,12 @@ type HomeLang = typeof HOMELANG
 
 //	Layout
 export type LayoutLangProfile = LayoutLang['PROFILE']
-export type LayoutLangThemeProvider = LayoutLang['ThemeProvider']
+export type LayoutLangThemeProvider = LayoutLangProfile['FOOTER']['THEMEPROVIDER']
+export type LayoutLangLangSelector = LayoutLangProfile['FOOTER']['LANGSELECTOR']
 export type LayoutLangFooter = LayoutLang['FOOTER']
 
 //	Home
+export type HomeLangAbout = HomeLang['ABOUT']
 export type HomeLangExperience = HomeLang['EXPERIENCE']
 export type HomeLangExperienceItem = HomeLang['EXPERIENCE']['LIST'][0]
 export type HomeLangProjects = HomeLang['PROJECTS']

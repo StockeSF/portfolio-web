@@ -1,55 +1,55 @@
 {
 	"PROFILE": {
 		"NAME": "Frank Contreras",
-		"LABEL": "Desarrollador Web Front-End",
-		"DESC": "Técnico Superior Universitario en Informática. Especializado en el desarrollo de páginas dinámicas y responsive.",
-		"IMGALT": "Frank Contreras sonriendo",
+		"LABEL": "Front-End Developer",
+		"DESC": "Associate's Degree in Computer Science. Specialized on the development of dynamic and responsive websites.",
+		"IMGALT": "Frank Contreras smiling",
 		"LOCATION": ["Caracas", "Venezuela"],
 		"EMAIL": "fonseca.fr2709@gmail.com",
 		"ACCOUNTS": [
 			{
 				"ICON": "mail",
 				"NAME": "Email",
-				"LABEL": "Contáctame por correo",
+				"LABEL": "Send me an email",
 				"URL": "mailto:"
 			},
 			{
 				"ICON": "brand-github",
 				"NAME": "Github",
-				"LABEL": "Mi cuenta de Github",
+				"LABEL": "My Github account",
 				"URL": "https://github.com/StockeSF"
 			},
 			{
 				"ICON": "brand-linkedin",
 				"NAME": "LinkedIn",
-				"LABEL": "Mi cuenta de LinkedIn",
+				"LABEL": "My LinkedIn account",
 				"URL": "https://www.linkedin.com/in/frank-contreras-67622a292/"
 			}
 		],
 		"FOOTER": {
 			"THEMEPROVIDER": {
-				"LABEL": "Selector de temas",
+				"LABEL": "Theme selector",
 				"OPTIONS": {
 					"system": {
-						"LABEL": "Sistema",
+						"LABEL": "System",
 						"SELECTED": true
 					},
 					"light": {
-						"LABEL": "Modo claro",
+						"LABEL": "Light mode",
 						"SELECTED": false
 					},
 					"dark": {
-						"LABEL": "Modo oscuro",
+						"LABEL": "Dark mode",
 						"SELECTED": false
 					}
 				}
 			},
 			"LANGSELECTOR": {
-				"LABEL": "Selector de idioma"
+				"LABEL": "Lang selector"
 			}
 		}
 	},
 	"FOOTER": {
-		"DESC": "Frank Contreras. <br /> Hecho con ❤️ con Astro y Tailwind CSS."
+		"DESC": "Frank Contreras. <br /> Made with ❤️ using Astro and Tailwind CSS."
 	}
 }

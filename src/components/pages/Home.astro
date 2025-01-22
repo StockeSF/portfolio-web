@@ -11,11 +11,11 @@ import Projects from '@comp/sections/Projects.astro'
 import Skills from '@comp/sections/Skills.astro'
 
 const { currentLocale = 'es' } = Astro
-const { SEO, EXP, PROJ, EDU, SKL } = langSelector({ currentLocale, labels })
+const { SEO, ABT, EXP, PROJ, EDU, SKL } = langSelector({ currentLocale, labels })
 ---
 
-<BaseLayout title=`${SEO.TITLE_1} · ${SEO.TITLE_2}` description={SEO.DESC} url={SEO.URL}>
-	<About />
+<BaseLayout title=`${SEO.TITLE_1} · ${SEO.TITLE_2}` description={SEO.DESC}>
+	<About LANG={ABT} />
 	<Experience LANG={EXP} />
 	<Projects LANG={PROJ} />
 	<Education LANG={EDU} />

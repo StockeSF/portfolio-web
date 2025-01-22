@@ -13,6 +13,7 @@ import SEO from '@comp/SEO.astro'
 
 import Profile from '@comp/layout/Profile.astro'
 import Footer from '@comp/layout/Footer.astro'
+import ScrollToTopBtn from '@comp/layout/ScrollToTopBtn.astro'
 
 const { currentLocale = 'es' } = Astro
 const { PROF, FOOTER } = langSelector({ currentLocale, labels })
@@ -40,6 +41,8 @@ const { PROF, FOOTER } = langSelector({ currentLocale, labels })
 			<slot />
 			<Footer LANG={FOOTER} />
 		</main>
+
+		<ScrollToTopBtn />
 	</body>
 </html>
 
