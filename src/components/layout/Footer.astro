@@ -3,8 +3,6 @@ import type { I18NSection, LayoutLangFooter } from '@/types/i18n.type'
 
 type Props = I18NSection<LayoutLangFooter>
 
-export const prerender = false
-
 const { LANG } = Astro.props
 const year = new Date().getFullYear()
 ---

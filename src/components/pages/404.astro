@@ -9,6 +9,7 @@ import beatrice from '@/assets/beatrice.webp'
 
 import BaseLayout from '@/layouts/BaseLayout.astro'
 
+export const prerender = false
 const { currentLocale = 'es' } = Astro
 const { SEO, CONT } = langSelector({ currentLocale, labels })
 ---
