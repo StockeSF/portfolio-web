@@ -1,5 +1,7 @@
 # My web portfolio 🧑‍💻
 
 <div align="center">
-  <img src="public/readme_img.png" />
+  <a href="https://frankcff.netlify.app/">
+    <img src="public/readme_img.png" />
+  </a>
 </div>
