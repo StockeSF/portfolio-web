@@ -10,7 +10,7 @@ export default defineConfig({
   site: 'https://frankcff.netlify.app',
   trailingSlash: 'never',
   redirects: {
-    '/': '/es/',
+    '/': '/es',
   },
   i18n: {
     defaultLocale: 'es',
