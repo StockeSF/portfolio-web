@@ -1,55 +1,55 @@
 {
-	"PROFILE": {
-		"NAME": "Frank Contreras",
-		"LABEL": "Front-End Developer",
-		"DESC": "Associate's Degree in Computer Science. Specialized on the development of dynamic and responsive websites.",
-		"IMGALT": "Frank Contreras smiling",
-		"LOCATION": ["Caracas", "Venezuela"],
-		"EMAIL": "fonseca.fr2709@gmail.com",
-		"ACCOUNTS": [
-			{
-				"ICON": "mail",
-				"NAME": "Email",
-				"LABEL": "Send me an email",
-				"URL": "mailto:"
-			},
-			{
-				"ICON": "brand-github",
-				"NAME": "Github",
-				"LABEL": "My Github account",
-				"URL": "https://github.com/StockeSF"
-			},
-			{
-				"ICON": "brand-linkedin",
-				"NAME": "LinkedIn",
-				"LABEL": "My LinkedIn account",
-				"URL": "https://www.linkedin.com/in/frank-contreras-67622a292/"
-			}
-		],
-		"FOOTER": {
-			"THEMEPROVIDER": {
-				"LABEL": "Theme selector",
-				"OPTIONS": {
-					"system": {
-						"LABEL": "System",
-						"SELECTED": true
-					},
-					"light": {
-						"LABEL": "Light mode",
-						"SELECTED": false
-					},
-					"dark": {
-						"LABEL": "Dark mode",
-						"SELECTED": false
-					}
-				}
-			},
-			"LANGSELECTOR": {
-				"LABEL": "Lang selector"
-			}
-		}
-	},
-	"FOOTER": {
-		"DESC": "Frank Contreras. <br /> Made with ❤️ using Astro and Tailwind CSS."
-	}
+  "PROFILE": {
+    "NAME": "Frank Contreras",
+    "LABEL": "Front-End Developer",
+    "DESC": "Associate's Degree in Computer Science. Specialized on the development of dynamic and responsive websites.",
+    "IMGALT": "Frank Contreras smiling",
+    "LOCATION": ["Caracas", "Venezuela"],
+    "EMAIL": "fonseca.fr2709@gmail.com",
+    "ACCOUNTS": [
+      {
+        "ICON": "mail",
+        "NAME": "Email",
+        "LABEL": "Send me an email",
+        "URL": "mailto:"
+      },
+      {
+        "ICON": "brand-github",
+        "NAME": "Github",
+        "LABEL": "My Github account",
+        "URL": "https://github.com/kanonfr"
+      },
+      {
+        "ICON": "brand-linkedin",
+        "NAME": "LinkedIn",
+        "LABEL": "My LinkedIn account",
+        "URL": "https://www.linkedin.com/in/frank-contreras-67622a292/"
+      }
+    ],
+    "FOOTER": {
+      "THEMEPROVIDER": {
+        "LABEL": "Theme selector",
+        "OPTIONS": {
+          "system": {
+            "LABEL": "System",
+            "SELECTED": true
+          },
+          "light": {
+            "LABEL": "Light mode",
+            "SELECTED": false
+          },
+          "dark": {
+            "LABEL": "Dark mode",
+            "SELECTED": false
+          }
+        }
+      },
+      "LANGSELECTOR": {
+        "LABEL": "Lang selector"
+      }
+    }
+  },
+  "FOOTER": {
+    "DESC": "Frank Contreras. <br /> Made with ❤️ using Astro and Tailwind CSS."
+  }
 }

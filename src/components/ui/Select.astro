@@ -1,37 +1,37 @@
 ---
 interface Props {
-	label: string
-	value: string
-	width?: string
-	options: Array<{
-		VALUE: string
-		LABEL: string
-		SELECTED?: boolean
-	}>
+  label: string
+  value: string
+  width?: string
+  options: Array<{
+    VALUE: string
+    LABEL: string
+    SELECTED?: boolean
+  }>
 }
 
 const { label, value, options } = Astro.props
 ---
 
 <label class="group flex cursor-pointer items-center gap-2">
-	<span class="hidden">{label}</span>
+  <span class="hidden">{label}</span>
 
-	<slot name="icon" />
+  <slot name="icon" />
 
-	<select
-		value={value}
-		class="flex w-fit cursor-pointer truncate border-none bg-inherit pe-2 ps-7 text-sm text-title transition-colors group-hover:text-label"
-		autocomplete="off"
-	>
-		{
-			options.map(({ VALUE, LABEL, SELECTED = false }) => (
-				<option
-					class="ms-2 bg-background text-text"
-					set:html={LABEL}
-					value={VALUE}
-					selected={SELECTED}
-				/>
-			))
-		}
-	</select>
+  <select
+    value={value}
+    class="flex w-fit cursor-pointer truncate border-none bg-inherit pe-2 ps-7 text-sm text-title transition-colors group-hover:text-label"
+    autocomplete="off"
+  >
+    {
+      options.map(({ VALUE, LABEL, SELECTED = false }) => (
+        <option
+          class="ms-2 bg-background text-text"
+          set:html={LABEL}
+          value={VALUE}
+          selected={SELECTED}
+        />
+      ))
+    }
+  </select>
 </label>

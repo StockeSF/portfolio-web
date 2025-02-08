@@ -11,7 +11,7 @@ const { LANG } = Astro.props
 ---
 
 <SectionLayout id={LANG.ID} title={LANG.TITLE}>
-	<div class="group/item mx-4 space-y-12">
-		{LANG.LIST.map((exp) => <ExpCard {...exp} PILLS={LANG.PILLS} />)}
-	</div>
+  <div class="group/item mx-4 space-y-12">
+    {LANG.LIST.map((exp) => <ExpCard {...exp} PILLS={LANG.PILLS} />)}
+  </div>
 </SectionLayout>

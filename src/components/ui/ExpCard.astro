@@ -8,26 +8,26 @@ const { NAME, WORK, TIME, DUTIES, PILLS } = Astro.props
 ---
 
 <Card as="article">
-	<Fragment slot="header">{TIME}</Fragment>
+  <Fragment slot="header">{TIME}</Fragment>
 
-	<h2 class="text-base font-bold text-title sm:text-xl">{NAME}</h2>
-	<h3 class="mb-2 text-sm font-semibold text-accent sm:text-lg">{WORK}</h3>
+  <h2 class="text-base font-bold text-title sm:text-xl">{NAME}</h2>
+  <h3 class="mb-2 text-sm font-semibold text-accent sm:text-lg">{WORK}</h3>
 
-	{
-		Object.entries(DUTIES).map(([_, { LABEL, LIST }]) => (
-			<>
-				<h4 class="font-medium text-title">{LABEL}:</h4>
+  {
+    Object.entries(DUTIES).map(([, { LABEL, LIST }]) => (
+      <>
+        <h4 class="font-medium text-title">{LABEL}:</h4>
 
-				<ul class="my-1.5 list-disc text-text marker:text-accent">
-					{LIST.map((item) => (
-						<li class="ms-8 text-sm font-medium leading-normal">{item}</li>
-					))}
-				</ul>
-			</>
-		))
-	}
+        <ul class="my-1.5 list-disc text-text marker:text-accent">
+          {LIST.map((item) => (
+            <li class="ms-8 text-sm font-medium leading-normal">{item}</li>
+          ))}
+        </ul>
+      </>
+    ))
+  }
 
-	<ul class="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2">
-		{PILLS.map(({ LABEL }) => <Pill as="li" label={LABEL} border={false} />)}
-	</ul>
+  <ul class="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2">
+    {PILLS.map(({ LABEL }) => <Pill as="li" label={LABEL} border={false} />)}
+  </ul>
 </Card>

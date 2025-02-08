@@ -9,7 +9,7 @@ import '@fontsource-variable/inter'
 import { Picture } from 'astro:assets'
 import banner from '@/assets/banner.png'
 
-import SEO from '@comp/SEO.astro'
+import Seo from '@comp/SEO.astro'
 
 import Profile from '@comp/layout/Profile.astro'
 import Footer from '@comp/layout/Footer.astro'
@@ -21,31 +21,31 @@ const { PROF, FOOTER } = langSelector({ currentLocale, labels })
 
 <!doctype html>
 <html lang={currentLocale} class="scroll-smooth" data-theme="system">
-	<head>
-		<SEO {...Astro.props} />
-	</head>
-	<body class="mx-auto grid min-h-screen max-w-screen-2xl gap-12 lg:grid-cols-6 xl:gap-24">
-		<Picture
-			src={banner}
-			formats={['webp']}
-			quality={100}
-			fetchpriority="high"
-			pictureAttributes={{ class: '-z-10 size-full fixed grid -right-6 bottom-0' }}
-			class="z-10 h-full w-[40%] translate-x-6 place-self-end object-cover opacity-15 blur-sm grayscale"
-			alt=""
-		/>
+  <head>
+    <Seo {...Astro.props} />
+  </head>
+  <body class="mx-auto grid min-h-screen max-w-screen-2xl gap-12 lg:grid-cols-6 xl:gap-24">
+    <Picture
+      src={banner}
+      formats={['webp']}
+      quality={100}
+      fetchpriority="high"
+      pictureAttributes={{ class: '-z-10 size-full fixed grid -right-6 bottom-0' }}
+      class="z-10 h-full w-[40%] translate-x-6 place-self-end object-cover opacity-15 blur-sm grayscale"
+      alt=""
+    />
 
-		<Profile LANG={PROF} />
+    <Profile LANG={PROF} />
 
-		<main class="relative grid gap-16 lg:col-span-4 lg:py-16 lg:pe-14">
-			<slot />
-			<Footer LANG={FOOTER} />
-		</main>
+    <main class="relative grid gap-16 lg:col-span-4 lg:py-16 lg:pe-14">
+      <slot />
+      <Footer LANG={FOOTER} />
+    </main>
 
-		<ScrollToTopBtn />
-	</body>
+    <ScrollToTopBtn />
+  </body>
 </html>
 
 <style is:global>
-	@import url('../assets/css/globals.css');
+  @import url('../assets/css/globals.css');
 </style>

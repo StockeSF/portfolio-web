@@ -12,7 +12,7 @@ const { LANG } = Astro.props
 ---
 
 <SectionLayout id={LANG.ID} title={LANG.TITLE}>
-	<TimelineContainer>
-		{LANG.LIST.map((item) => <TimelineItem ITEM={item} LATEST_TEXT={LANG.LATEST_TEXT} />)}
-	</TimelineContainer>
+  <TimelineContainer>
+    {LANG.LIST.map((item) => <TimelineItem ITEM={item} LATEST_TEXT={LANG.LATEST_TEXT} />)}
+  </TimelineContainer>
 </SectionLayout>

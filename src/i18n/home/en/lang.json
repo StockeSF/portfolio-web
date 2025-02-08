@@ -1,331 +1,331 @@
 {
-	"SEO": {
-		"TITLE_1": "Frank Contreras",
-		"TITLE_2": "Portfolio",
-		"DESC": "Frank Contreras's web portfolio, Front-End developer."
-	},
-	"ABOUT": {
-		"ID": "about",
-		"TITLE": "About",
-		"DESC": [
-			"I'm a developer 🧑‍💻 with an Associate's Degree in Computer Science from \"Instituto Universitario de Mercadotecnia\" (I.S.U.M.), with a half year of experience in web development, precisely, in Front-End.",
-			"In my working experience, which given me good results accord with the interested part; I made maintenance to internal applications and developed an interim website which been in production some months 😁.",
-			"I have extended and practical knowledge about languages and frameworks around the web development, and I'm currently studying Python to broad my knowledge into Back-End development, and few months ago, I got graduated from English C1 🎓.",
-			"I'm a passionate of tech world and new experience, and I love all about videogames and computers. Thank you for being here! 🫡."
-		]
-	},
-	"EXPERIENCE": {
-		"ID": "experience",
-		"TITLE": "Experience",
-		"LIST": [
-			{
-				"NAME": "Instituto Municipal de Crédito Popular",
-				"WORK": "Junior Analyst Programmer",
-				"TIME": "Jul. 2022 - Feb. 2023",
-				"DUTIES": {
-					"RESPONSIBILITIES": {
-						"LABEL": "Responsibilities",
-						"LIST": [
-							"Optimizing institution's internal applications, reducing errors and adding UI improvements."
-						]
-					},
-					"ACHIEVEMENTS": {
-						"LABEL": "Achievements",
-						"LIST": [
-							"Developed a provisional website to improve the visibility from the institution.",
-							"Designed an attendance control system to updating the previous one."
-						]
-					}
-				}
-			}
-		],
-		"PILLS": [
-			{
-				"LABEL": "HTML"
-			},
-			{
-				"LABEL": "CSS"
-			},
-			{
-				"LABEL": "JavaScript"
-			},
-			{
-				"LABEL": "React"
-			},
-			{
-				"LABEL": "PHP"
-			}
-		]
-	},
-	"PROJECTS": {
-		"ID": "projects",
-		"TITLE": "Projects",
-		"SUBTITLE": {
-			"MAIN": "Some of my projects,",
-			"EXTENDED": "click here to find more"
-		},
-		"LIST": [
-			{
-				"TITLE": "I.M.C.P. website",
-				"DESC": "Interim website carried out during my staying at I.M.C.P; Built from scratch with React.",
-				"CATEGORY": "Professional",
-				"IMG": {
-					"FILE": "imcp.jpg",
-					"ALTIMG": "Screenshot from the website."
-				},
-				"LINKS": {
-					"PAGE": {
-						"URL": "https://pagina-imcp.netlify.app/",
-						"LABEL": "I.M.C.P. website (opens in a new tab)."
-					}
-				},
-				"PILLS": [
-					{
-						"LABEL": "HTML",
-						"ICON": "html5"
-					},
-					{
-						"LABEL": "CSS",
-						"ICON": "css"
-					},
-					{
-						"LABEL": "JavaScript",
-						"ICON": "javascript"
-					},
-					{
-						"LABEL": "React",
-						"ICON": "react"
-					}
-				]
-			},
-			{
-				"TITLE": "DDLC Plus! (Clone)",
-				"DESC": "Doki Doki Literature Club Plus! landing clone. Made from scratch with Astro and Svelte, with performance improvements.",
-				"CATEGORY": "Personal",
-				"IMG": {
-					"FILE": "doki.jpg",
-					"ALTIMG": "Screenshot from the website."
-				},
-				"LINKS": {
-					"PAGE": {
-						"URL": "https://doki-doki-plus-clone.vercel.app/",
-						"LABEL": "DDLC Plus! (Clone) website (opens in a new tab)."
-					},
-					"GITHUB": {
-						"URL": "https://github.com/StockeSF/DokiDokiPlus-Clone",
-						"LABEL": "Github page (opens in a new tab)."
-					}
-				},
-				"PILLS": [
-					{
-						"LABEL": "HTML",
-						"ICON": "html5"
-					},
-					{
-						"LABEL": "CSS",
-						"ICON": "css"
-					},
-					{
-						"LABEL": "Tailwind",
-						"ICON": "tailwindcss"
-					},
-					{
-						"LABEL": "JavaScript",
-						"ICON": "javascript"
-					},
-					{
-						"LABEL": "TypeScript",
-						"ICON": "typescript"
-					},
-					{
-						"LABEL": "Astro",
-						"ICON": "astro"
-					},
-					{
-						"LABEL": "Svelte",
-						"ICON": "svelte"
-					}
-				]
-			},
-			{
-				"TITLE": "Pokedex Pokémon",
-				"DESC": "Website where you can search Pokemons, using the API called \"PokeAPI\". Made from scratch with Next.js and React.",
-				"CATEGORY": "Personal",
-				"IMG": {
-					"FILE": "pokedex.jpg",
-					"ALTIMG": "Screenshot from the website."
-				},
-				"LINKS": {
-					"PAGE": {
-						"URL": "https://pokedex-pokemon-five.vercel.app/",
-						"LABEL": "Pokedex Pokemon - Find your favorite Pokemons! (opens in a new tab)."
-					},
-					"GITHUB": {
-						"URL": "https://github.com/StockeSF/Pokedex-Pokemon",
-						"LABEL": "Github page (opens in a new tab)."
-					}
-				},
-				"PILLS": [
-					{
-						"LABEL": "HTML",
-						"ICON": "html5"
-					},
-					{
-						"LABEL": "CSS",
-						"ICON": "css"
-					},
-					{
-						"LABEL": "JavaScript",
-						"ICON": "javascript"
-					},
-					{
-						"LABEL": "TypeScript",
-						"ICON": "typescript"
-					},
-					{
-						"LABEL": "React",
-						"ICON": "react"
-					},
-					{
-						"LABEL": "Next.js",
-						"ICON": "nextdotjs"
-					}
-				]
-			},
-			{
-				"TITLE": "Tic Tac Toe",
-				"DESC": "Website which you can play the classic Tic Tac Toe. Built from scratch with React.",
-				"CATEGORY": "Personal",
-				"IMG": {
-					"FILE": "tictactoe.png",
-					"ALTIMG": "Screenshot from the website."
-				},
-				"LINKS": {
-					"PAGE": {
-						"URL": "https://frankcff-tictactoe.netlify.app/",
-						"LABEL": "Tic Tac Toe (opens in a new tab)."
-					},
-					"GITHUB": {
-						"URL": "https://github.com/StockeSF/tres-en-raya",
-						"LABEL": "Github page (opens in a new tab)."
-					}
-				},
-				"PILLS": [
-					{
-						"LABEL": "HTML",
-						"ICON": "html5"
-					},
-					{
-						"LABEL": "CSS",
-						"ICON": "css"
-					},
-					{
-						"LABEL": "JavaScript",
-						"ICON": "javascript"
-					},
-					{
-						"LABEL": "TypeScript",
-						"ICON": "typescript"
-					},
-					{
-						"LABEL": "React",
-						"ICON": "react"
-					}
-				]
-			}
-		]
-	},
-	"EDUCATION": {
-		"ID": "education",
-		"TITLE": "Education",
-		"LATEST_TEXT": "Latest",
-		"LIST": [
-			{
-				"ICON": "book-2",
-				"TITLE": "Advanced English (C1)",
-				"SUBTITLE": "Instituto Oxford Venezuela",
-				"TIME": "August 2023 - August 2024",
-				"LATEST": true
-			},
-			{
-				"ICON": "school",
-				"TITLE": "Associate's Degree in Computer Science",
-				"SUBTITLE": "Instituto Universitario en Mercadotecnia",
-				"TIME": "September 2020 - July 2023"
-			},
-			{
-				"ICON": "book-2",
-				"TITLE": "Computer Technician",
-				"SUBTITLE": "Instituto Luisa Cáceres de Arismendi",
-				"TIME": "September 2019"
-			}
-		]
-	},
-	"SKILLS": {
-		"ID": "stack",
-		"TITLE": "Stack",
-		"LEARNED_TECH_PILLS": [
-			{
-				"LABEL": "HTML",
-				"ICON": "html5"
-			},
-			{
-				"LABEL": "CSS",
-				"ICON": "css"
-			},
-			{
-				"LABEL": "Tailwind CSS",
-				"ICON": "tailwindcss"
-			},
-			{
-				"LABEL": "JavaScript",
-				"ICON": "javascript"
-			},
-			{
-				"LABEL": "TypeScript",
-				"ICON": "typescript"
-			},
-			{
-				"LABEL": "React",
-				"ICON": "react"
-			},
-			{
-				"LABEL": "Vue.js",
-				"ICON": "vuedotjs"
-			},
-			{
-				"LABEL": "Svelte",
-				"ICON": "svelte"
-			},
-			{
-				"LABEL": "Astro",
-				"ICON": "astro"
-			},
-			{
-				"LABEL": "PHP",
-				"ICON": "php"
-			},
-			{
-				"LABEL": "Git",
-				"ICON": "git"
-			}
-		],
-		"TO_LEARN_TECH_PILLS": {
-			"LABEL": "In study",
-			"LIST": [
-				{
-					"LABEL": "Laravel",
-					"ICON": "laravel"
-				},
-				{
-					"LABEL": "Python",
-					"ICON": "python"
-				},
-				{
-					"LABEL": "Django",
-					"ICON": "django"
-				}
-			]
-		}
-	}
+  "SEO": {
+    "TITLE_1": "Frank Contreras",
+    "TITLE_2": "Portfolio",
+    "DESC": "Frank Contreras's web portfolio, Front-End developer."
+  },
+  "ABOUT": {
+    "ID": "about",
+    "TITLE": "About",
+    "DESC": [
+      "I'm a developer 🧑‍💻 with an Associate's Degree in Computer Science from \"Instituto Universitario de Mercadotecnia\" (I.S.U.M.), with a half year of experience in web development, precisely, in Front-End.",
+      "In my working experience, which given me good results accord with the interested part; I made maintenance to internal applications and developed an interim website which been in production some months 😁.",
+      "I have extended and practical knowledge about languages and frameworks around the web development, and I'm currently studying Python to broad my knowledge into Back-End development, and few months ago, I got graduated from English C1 🎓.",
+      "I'm a passionate of tech world and new experience, and I love all about videogames and computers. Thank you for being here! 🫡."
+    ]
+  },
+  "EXPERIENCE": {
+    "ID": "experience",
+    "TITLE": "Experience",
+    "LIST": [
+      {
+        "NAME": "Instituto Municipal de Crédito Popular",
+        "WORK": "Junior Analyst Programmer",
+        "TIME": "Jul. 2022 - Feb. 2023",
+        "DUTIES": {
+          "RESPONSIBILITIES": {
+            "LABEL": "Responsibilities",
+            "LIST": [
+              "Optimizing institution's internal applications, reducing errors and adding UI improvements."
+            ]
+          },
+          "ACHIEVEMENTS": {
+            "LABEL": "Achievements",
+            "LIST": [
+              "Developed a provisional website to improve the visibility from the institution.",
+              "Designed an attendance control system to updating the previous one."
+            ]
+          }
+        }
+      }
+    ],
+    "PILLS": [
+      {
+        "LABEL": "HTML"
+      },
+      {
+        "LABEL": "CSS"
+      },
+      {
+        "LABEL": "JavaScript"
+      },
+      {
+        "LABEL": "React"
+      },
+      {
+        "LABEL": "PHP"
+      }
+    ]
+  },
+  "PROJECTS": {
+    "ID": "projects",
+    "TITLE": "Projects",
+    "SUBTITLE": {
+      "MAIN": "Some of my projects,",
+      "EXTENDED": "click here to find more"
+    },
+    "LIST": [
+      {
+        "TITLE": "I.M.C.P. website",
+        "DESC": "Interim website carried out during my staying at I.M.C.P; Built from scratch with React.",
+        "CATEGORY": "Professional",
+        "IMG": {
+          "FILE": "imcp.jpg",
+          "ALTIMG": "Screenshot from the website."
+        },
+        "LINKS": {
+          "PAGE": {
+            "URL": "https://pagina-imcp.netlify.app/",
+            "LABEL": "I.M.C.P. website (opens in a new tab)."
+          }
+        },
+        "PILLS": [
+          {
+            "LABEL": "HTML",
+            "ICON": "html5"
+          },
+          {
+            "LABEL": "CSS",
+            "ICON": "css"
+          },
+          {
+            "LABEL": "JavaScript",
+            "ICON": "javascript"
+          },
+          {
+            "LABEL": "React",
+            "ICON": "react"
+          }
+        ]
+      },
+      {
+        "TITLE": "DDLC Plus! (Clone)",
+        "DESC": "Doki Doki Literature Club Plus! landing clone. Made from scratch with Astro and Svelte, with performance improvements.",
+        "CATEGORY": "Personal",
+        "IMG": {
+          "FILE": "doki.jpg",
+          "ALTIMG": "Screenshot from the website."
+        },
+        "LINKS": {
+          "PAGE": {
+            "URL": "https://doki-doki-plus-clone.vercel.app/",
+            "LABEL": "DDLC Plus! (Clone) website (opens in a new tab)."
+          },
+          "GITHUB": {
+            "URL": "https://github.com/kanonfr/DokiDokiPlus-Clone",
+            "LABEL": "Github page (opens in a new tab)."
+          }
+        },
+        "PILLS": [
+          {
+            "LABEL": "HTML",
+            "ICON": "html5"
+          },
+          {
+            "LABEL": "CSS",
+            "ICON": "css"
+          },
+          {
+            "LABEL": "Tailwind",
+            "ICON": "tailwindcss"
+          },
+          {
+            "LABEL": "JavaScript",
+            "ICON": "javascript"
+          },
+          {
+            "LABEL": "TypeScript",
+            "ICON": "typescript"
+          },
+          {
+            "LABEL": "Astro",
+            "ICON": "astro"
+          },
+          {
+            "LABEL": "Svelte",
+            "ICON": "svelte"
+          }
+        ]
+      },
+      {
+        "TITLE": "Pokedex Pokémon",
+        "DESC": "Website where you can search Pokemons, using the API called \"PokeAPI\". Made from scratch with Next.js and React.",
+        "CATEGORY": "Personal",
+        "IMG": {
+          "FILE": "pokedex.jpg",
+          "ALTIMG": "Screenshot from the website."
+        },
+        "LINKS": {
+          "PAGE": {
+            "URL": "https://pokedex-pokemon-five.vercel.app/",
+            "LABEL": "Pokedex Pokemon - Find your favorite Pokemons! (opens in a new tab)."
+          },
+          "GITHUB": {
+            "URL": "https://github.com/kanonfr/Pokedex-Pokemon",
+            "LABEL": "Github page (opens in a new tab)."
+          }
+        },
+        "PILLS": [
+          {
+            "LABEL": "HTML",
+            "ICON": "html5"
+          },
+          {
+            "LABEL": "CSS",
+            "ICON": "css"
+          },
+          {
+            "LABEL": "JavaScript",
+            "ICON": "javascript"
+          },
+          {
+            "LABEL": "TypeScript",
+            "ICON": "typescript"
+          },
+          {
+            "LABEL": "React",
+            "ICON": "react"
+          },
+          {
+            "LABEL": "Next.js",
+            "ICON": "nextdotjs"
+          }
+        ]
+      },
+      {
+        "TITLE": "Tic Tac Toe",
+        "DESC": "Website which you can play the classic Tic Tac Toe. Built from scratch with React.",
+        "CATEGORY": "Personal",
+        "IMG": {
+          "FILE": "tictactoe.png",
+          "ALTIMG": "Screenshot from the website."
+        },
+        "LINKS": {
+          "PAGE": {
+            "URL": "https://frankcff-tictactoe.netlify.app/",
+            "LABEL": "Tic Tac Toe (opens in a new tab)."
+          },
+          "GITHUB": {
+            "URL": "https://github.com/kanonfr/tres-en-raya",
+            "LABEL": "Github page (opens in a new tab)."
+          }
+        },
+        "PILLS": [
+          {
+            "LABEL": "HTML",
+            "ICON": "html5"
+          },
+          {
+            "LABEL": "CSS",
+            "ICON": "css"
+          },
+          {
+            "LABEL": "JavaScript",
+            "ICON": "javascript"
+          },
+          {
+            "LABEL": "TypeScript",
+            "ICON": "typescript"
+          },
+          {
+            "LABEL": "React",
+            "ICON": "react"
+          }
+        ]
+      }
+    ]
+  },
+  "EDUCATION": {
+    "ID": "education",
+    "TITLE": "Education",
+    "LATEST_TEXT": "Latest",
+    "LIST": [
+      {
+        "ICON": "book-2",
+        "TITLE": "Advanced English (C1)",
+        "SUBTITLE": "Instituto Oxford Venezuela",
+        "TIME": "August 2023 - August 2024",
+        "LATEST": true
+      },
+      {
+        "ICON": "school",
+        "TITLE": "Associate's Degree in Computer Science",
+        "SUBTITLE": "Instituto Universitario en Mercadotecnia",
+        "TIME": "September 2020 - July 2023"
+      },
+      {
+        "ICON": "book-2",
+        "TITLE": "Computer Technician",
+        "SUBTITLE": "Instituto Luisa Cáceres de Arismendi",
+        "TIME": "September 2019"
+      }
+    ]
+  },
+  "SKILLS": {
+    "ID": "stack",
+    "TITLE": "Stack",
+    "LEARNED_TECH_PILLS": [
+      {
+        "LABEL": "HTML",
+        "ICON": "html5"
+      },
+      {
+        "LABEL": "CSS",
+        "ICON": "css"
+      },
+      {
+        "LABEL": "Tailwind CSS",
+        "ICON": "tailwindcss"
+      },
+      {
+        "LABEL": "JavaScript",
+        "ICON": "javascript"
+      },
+      {
+        "LABEL": "TypeScript",
+        "ICON": "typescript"
+      },
+      {
+        "LABEL": "React",
+        "ICON": "react"
+      },
+      {
+        "LABEL": "Vue.js",
+        "ICON": "vuedotjs"
+      },
+      {
+        "LABEL": "Svelte",
+        "ICON": "svelte"
+      },
+      {
+        "LABEL": "Astro",
+        "ICON": "astro"
+      },
+      {
+        "LABEL": "PHP",
+        "ICON": "php"
+      },
+      {
+        "LABEL": "Git",
+        "ICON": "git"
+      }
+    ],
+    "TO_LEARN_TECH_PILLS": {
+      "LABEL": "In study",
+      "LIST": [
+        {
+          "LABEL": "Laravel",
+          "ICON": "laravel"
+        },
+        {
+          "LABEL": "Python",
+          "ICON": "python"
+        },
+        {
+          "LABEL": "Django",
+          "ICON": "django"
+        }
+      ]
+    }
+  }
 }

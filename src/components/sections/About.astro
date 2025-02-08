@@ -1,20 +1,20 @@
 ---
 import type { I18NSection, HomeLangAbout } from '@/types/i18n.type'
 
-type Props = I18NSection<HomeLangAbout>
-
 import SectionLayout from '@/layouts/SectionLayout.astro'
+
+type Props = I18NSection<HomeLangAbout>
 
 const { LANG } = Astro.props
 ---
 
 <SectionLayout id={LANG.ID} title={LANG.TITLE}>
-	{
-		LANG.DESC.map((txt, i) => (
-			<p
-				class:list={['text-base leading-normal text-text', { 'mb-6': i !== LANG.DESC.length - 1 }]}
-				set:html={txt}
-			/>
-		))
-	}
+  {
+    LANG.DESC.map((txt, i) => (
+      <p
+        class:list={['text-base leading-normal text-text', { 'mb-6': i !== LANG.DESC.length - 1 }]}
+        set:html={txt}
+      />
+    ))
+  }
 </SectionLayout>

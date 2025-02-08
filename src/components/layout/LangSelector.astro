@@ -18,41 +18,41 @@ const { LABEL } = Astro.props
 ---
 
 <lang-container>
-	<Select
-		label={LABEL}
-		value={getPathname(currentLocale)}
-		options={Object.entries(langFilteredList).map(([code, lang]) => ({
-			LABEL: lang.label,
-			SELECTED: code === currentLocale,
-			VALUE: getPathname(code)
-		}))}
-	>
-		<LangIcon
-			slot="icon"
-			size={22}
-			class="absolute text-title transition-colors group-hover:text-label"
-		/>
-	</Select>
+  <Select
+    label={LABEL}
+    value={getPathname(currentLocale)}
+    options={Object.entries(langFilteredList).map(([code, lang]) => ({
+      LABEL: lang.label,
+      SELECTED: code === currentLocale,
+      VALUE: getPathname(code),
+    }))}
+  >
+    <LangIcon
+      slot="icon"
+      size={22}
+      class="absolute text-title transition-colors group-hover:text-label"
+    />
+  </Select>
 </lang-container>
 
 <script is:inline>
-	const changeLink = (path) => (window.location.pathname = path)
+  const changeLink = (path) => (window.location.pathname = path)
 
-	class LangContainer extends HTMLElement {
-		constructor() {
-			super()
+  class LangContainer extends HTMLElement {
+    constructor() {
+      super()
 
-			this.select = this.querySelector('select')
-			this.options = this.querySelectorAll('option')
+      this.select = this.querySelector('select')
+      this.options = this.querySelectorAll('option')
 
-			this.select?.addEventListener('change', (e) => {
-				if (e.currentTarget instanceof HTMLSelectElement) {
-					const value = e.currentTarget.value
-					changeLink(value)
-				}
-			})
-		}
-	}
+      this.select?.addEventListener('change', (e) => {
+        if (e.currentTarget instanceof HTMLSelectElement) {
+          const value = e.currentTarget.value
+          changeLink(value)
+        }
+      })
+    }
+  }
 
-	customElements.define('lang-container', LangContainer)
+  customElements.define('lang-container', LangContainer)
 </script>

@@ -2,39 +2,33 @@
 import { defineConfig } from 'astro/config'
 
 import tailwind from '@astrojs/tailwind'
-
 import icon from 'astro-icon'
-
-import netlify from '@astrojs/netlify';
+import netlify from '@astrojs/netlify'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://frankcff.netlify.app',
-
+  trailingSlash: 'never',
   redirects: {
-    '/': '/es/'
+    '/': '/es/',
   },
-
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
     routing: {
-      prefixDefaultLocale: true
-    }
-	},
-
+      prefixDefaultLocale: true,
+    },
+  },
   integrations: [
     tailwind(),
     icon({
-      iconDir: 'src/assets/icons/'
-    })
-	],
-
+      iconDir: 'src/assets/icons/',
+    }),
+  ],
   experimental: {
     svg: {
-      mode: 'sprite'
-    }
-	},
-
-  adapter: netlify()
+      mode: 'sprite',
+    },
+  },
+  adapter: netlify(),
 })

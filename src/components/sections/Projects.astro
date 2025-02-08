@@ -14,80 +14,80 @@ type Props = I18NSection<HomeLangProjects>
 const { LANG } = Astro.props
 
 const IMAGES = import.meta.glob<{ default: ImageMetadata }>(
-	'/src/assets/projects/*.{jpeg,jpg,png,gif}',
-	{
-		eager: true
-	}
+  '/src/assets/projects/*.{jpeg,jpg,png,gif}',
+  {
+    eager: true,
+  }
 )
 
 const getIMG = (file: string) => {
-	const keys = Object.keys(IMAGES)
-	const currentIndex = keys.findIndex((img) => img.includes(file))
+  const keys = Object.keys(IMAGES)
+  const currentIndex = keys.findIndex((img) => img.includes(file))
 
-	if (currentIndex === -1) throw new Error(`No se pudo encontrar la imágen: ${file}`)
-	return IMAGES[keys[currentIndex]].default
+  if (currentIndex === -1) throw new Error(`No se pudo encontrar la imágen: ${file}`)
+  return IMAGES[keys[currentIndex]].default
 }
 ---
 
 <SectionLayout id={LANG.ID} title={LANG.TITLE} class="overflow-hidden">
-	<div class="embla w-full">
-		<div class="embla__viewport">
-			<ol class="embla__container group/item lg:mx-4 lg:space-x-4">
-				{
-					LANG.LIST.map((ITEM) => {
-						const IMG = getIMG(ITEM.IMG.FILE)
+  <div class="embla w-full">
+    <div class="embla__viewport">
+      <ol class="embla__container group/item lg:mx-4 lg:space-x-4">
+        {
+          LANG.LIST.map((ITEM) => {
+            const IMG = getIMG(ITEM.IMG.FILE)
 
-						return <ProjectCard ITEM={ITEM} IMG={IMG} />
-					})
-				}
-			</ol>
-		</div>
+            return <ProjectCard ITEM={ITEM} IMG={IMG} />
+          })
+        }
+      </ol>
+    </div>
 
-		<button
-			class="embla__prev ms-3 mt-6 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
-		>
-			<ChevronLIcon size={26} />
-		</button>
-		<button
-			class="embla__next ms-3 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
-		>
-			<ChevronRIcon size={26} />
-		</button>
-	</div>
+    <button
+      class="embla__prev ms-3 mt-6 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
+    >
+      <ChevronLIcon size={26} />
+    </button>
+    <button
+      class="embla__next ms-3 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
+    >
+      <ChevronRIcon size={26} />
+    </button>
+  </div>
 </SectionLayout>
 
 <style>
-	.embla__container {
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: 90%;
-		grid-column-gap: 36px;
-	}
+  .embla__container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    grid-column-gap: 36px;
+  }
 
-	@media screen and (min-width: 640px) {
-		.embla__container {
-			grid-auto-columns: 60%;
-		}
-	}
+  @media screen and (min-width: 640px) {
+    .embla__container {
+      grid-auto-columns: 60%;
+    }
+  }
 
-	@media screen and (min-width: 768px) {
-		.embla__container {
-			grid-auto-columns: 45%;
-		}
-	}
+  @media screen and (min-width: 768px) {
+    .embla__container {
+      grid-auto-columns: 45%;
+    }
+  }
 </style>
 
 <script>
-	import EmblaCarousel from 'embla-carousel'
-	import { $ } from '@/utils/dom-selector'
+  import EmblaCarousel from 'embla-carousel'
+  import { $ } from '@/utils/dom-selector'
 
-	const emblaViewport = $('.embla__viewport') as HTMLElement
-	const options = { loop: false }
-	const prevButtonNode = $('.embla__prev') as HTMLElement
-	const nextButtonNode = $('.embla__next') as HTMLElement
+  const emblaViewport = $('.embla__viewport') as HTMLElement
+  const options = { loop: false }
+  const prevButtonNode = $('.embla__prev') as HTMLElement
+  const nextButtonNode = $('.embla__next') as HTMLElement
 
-	const embla = EmblaCarousel(emblaViewport, options)
+  const embla = EmblaCarousel(emblaViewport, options)
 
-	prevButtonNode.addEventListener('click', () => embla.scrollPrev(), false)
-	nextButtonNode.addEventListener('click', () => embla.scrollNext(), false)
+  prevButtonNode.addEventListener('click', () => embla.scrollPrev(), false)
+  nextButtonNode.addEventListener('click', () => embla.scrollNext(), false)
 </script>

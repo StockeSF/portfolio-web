@@ -4,13 +4,13 @@ import type * as LAYOUTLANG from '@/i18n/layout/es/lang.json'
 type LayoutLang = typeof LAYOUTLANG
 type HomeLang = typeof HOMELANG
 
-//	Layout
+// Layout
 export type LayoutLangProfile = LayoutLang['PROFILE']
 export type LayoutLangThemeProvider = LayoutLangProfile['FOOTER']['THEMEPROVIDER']
 export type LayoutLangLangSelector = LayoutLangProfile['FOOTER']['LANGSELECTOR']
 export type LayoutLangFooter = LayoutLang['FOOTER']
 
-//	Home
+// Home
 export type HomeLangAbout = HomeLang['ABOUT']
 export type HomeLangExperience = HomeLang['EXPERIENCE']
 export type HomeLangExperienceItem = HomeLang['EXPERIENCE']['LIST'][0]
@@ -21,14 +21,14 @@ export type HomeLangEducationListItem = HomeLang['EDUCATION']['LIST'][0]
 export type HomeLangSkills = HomeLang['SKILLS']
 
 interface PillProps {
-	LABEL: string
-	ICON?: string
+  LABEL: string
+  ICON?: string
 }
 
 export interface ExpTimeline extends HomeLangExperienceItem {
-	PILLS: PillProps[]
+  PILLS: PillProps[]
 }
 
 export interface I18NSection<T> {
-	LANG: T
+  LANG: T
 }

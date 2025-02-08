@@ -3,34 +3,33 @@ import ChevronUpIcon from '@icons/chevron-up.svg'
 ---
 
 <button
-	id="Totop"
-	class="pointer-events-none fixed bottom-6 right-6 z-50 rounded-md bg-accent p-2 opacity-0 transition-all hover:brightness-50"
+  id="Totop"
+  class="pointer-events-none fixed bottom-6 right-6 z-50 rounded-md bg-accent p-2 opacity-0 transition-all hover:brightness-50"
 >
-	<ChevronUpIcon size={24} class="text-white" />
+  <ChevronUpIcon size={24} class="text-white" />
 </button>
 
 <script>
-	import { $ } from '@/utils/dom-selector'
+  import { $ } from '@/utils/dom-selector'
 
-	document.addEventListener('DOMContentLoaded', () => {
-		const $totop = $('#Totop') as HTMLElement
-		const BREAKPOINT = 250
+  document.addEventListener('DOMContentLoaded', () => {
+    const $totop = $('#Totop') as HTMLElement
+    const BREAKPOINT = 250
 
-		$totop.addEventListener('click', () => (document.documentElement.scrollTop = 0))
+    $totop.addEventListener('click', () => (document.documentElement.scrollTop = 0))
 
-		const callback = () => {
-			if (window.scrollY >= BREAKPOINT) {
-				$totop.classList.replace('opacity-0', 'opacity-100')
-				$totop.classList.replace('pointer-events-none', 'pointer-events-auto')
-				return
-			}
+    const callback = () => {
+      if (window.scrollY >= BREAKPOINT) {
+        $totop.classList.replace('opacity-0', 'opacity-100')
+        $totop.classList.replace('pointer-events-none', 'pointer-events-auto')
+        return
+      }
 
-			$totop.classList.replace('opacity-100', 'opacity-0')
-			$totop.classList.replace('pointer-events-auto', 'pointer-events-none')
-			return
-		}
+      $totop.classList.replace('opacity-100', 'opacity-0')
+      $totop.classList.replace('pointer-events-auto', 'pointer-events-none')
+    }
 
-		callback()
-		window.addEventListener('scroll', callback)
-	})
+    callback()
+    window.addEventListener('scroll', callback)
+  })
 </script>

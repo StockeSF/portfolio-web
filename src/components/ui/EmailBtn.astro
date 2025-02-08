@@ -4,84 +4,84 @@ import ClipboardIcon from '@icons/clipboard.svg'
 import CheckIcon from '@icons/check.svg'
 
 interface Props {
-	text: string
+  text: string
 }
 
 const { text } = Astro.props
 ---
 
 <email-to-clipboard class="group" data-email={text}>
-	<button
-		id="email-btn"
-		class="inline-flex items-center gap-2 text-sm font-medium text-text transition-transform active:scale-95"
-	>
-		<MailIcon size={16} stroke="currentColor" />
-		<span
-			class="inline-flex items-center gap-1 tracking-wider text-text [&>svg]:ms-2 [&>svg]:opacity-0 [&>svg]:transition-opacity [&>svg]:group-hover:opacity-100"
-		>
-			{text}
-			<ClipboardIcon id="clipboard-icon" size={20} class="block" stroke="currentColor" />
-			<CheckIcon id="check-icon" size={20} class="hidden" stroke="currentColor" />
-		</span>
-	</button>
+  <button
+    id="email-btn"
+    class="inline-flex items-center gap-2 text-sm font-medium text-text transition-transform active:scale-95"
+  >
+    <MailIcon size={16} stroke="currentColor" />
+    <span
+      class="inline-flex items-center gap-1 tracking-wider text-text [&>svg]:ms-2 [&>svg]:opacity-0 [&>svg]:transition-opacity [&>svg]:group-hover:opacity-100"
+    >
+      {text}
+      <ClipboardIcon id="clipboard-icon" size={20} class="block" stroke="currentColor" />
+      <CheckIcon id="check-icon" size={20} class="hidden" stroke="currentColor" />
+    </span>
+  </button>
 </email-to-clipboard>
 
 <script>
-	import { $ } from '@/utils/dom-selector'
+  import { $ } from '@/utils/dom-selector'
 
-	class EmailToClipboard extends HTMLElement {
-		isActive: boolean
-		clipIcon: HTMLElement | null
-		emailBtn: HTMLElement | null
-		checkIcon: HTMLElement | null
-		myEmail: string
-		timeout: NodeJS.Timeout | null
+  class EmailToClipboard extends HTMLElement {
+    isActive: boolean
+    clipIcon: HTMLElement | null
+    emailBtn: HTMLElement | null
+    checkIcon: HTMLElement | null
+    myEmail: string
+    timeout: NodeJS.Timeout | null
 
-		constructor() {
-			super()
+    constructor() {
+      super()
 
-			this.isActive = false
-			this.emailBtn = $('#email-btn')
-			this.clipIcon = $('#clipboard-icon')
-			this.checkIcon = $('#check-icon')
-			this.timeout = null
-			this.myEmail = this.dataset.email !== undefined ? this.dataset.email : 'www@gmail.com'
-		}
+      this.isActive = false
+      this.emailBtn = $('#email-btn')
+      this.clipIcon = $('#clipboard-icon')
+      this.checkIcon = $('#check-icon')
+      this.timeout = null
+      this.myEmail = this.dataset.email !== undefined ? this.dataset.email : 'www@gmail.com'
+    }
 
-		changeStyle() {
-			if (this.isActive) {
-				this.clipIcon!.classList.replace('block', 'hidden')
-				this.checkIcon!.classList.replace('hidden', 'block')
-			} else {
-				this.clipIcon!.classList.replace('hidden', 'block')
-				this.checkIcon!.classList.replace('block', 'hidden')
-			}
-		}
+    changeStyle() {
+      if (this.isActive) {
+        this.clipIcon!.classList.replace('block', 'hidden')
+        this.checkIcon!.classList.replace('hidden', 'block')
+      } else {
+        this.clipIcon!.classList.replace('hidden', 'block')
+        this.checkIcon!.classList.replace('block', 'hidden')
+      }
+    }
 
-		async copyToClipboard(text: string) {
-			try {
-				await navigator.clipboard.writeText(text)
-			} catch (err: any) {
-				console.error(`No se pudo copiar el texto ${err.message}`)
-			}
-		}
+    async copyToClipboard(text: string) {
+      try {
+        await navigator.clipboard.writeText(text)
+      } catch (err: any) {
+        console.error(`No se pudo copiar el texto ${err.message}`)
+      }
+    }
 
-		connectedCallback() {
-			this.emailBtn!.addEventListener('click', () => {
-				this.copyToClipboard(this.myEmail)
+    connectedCallback() {
+      this.emailBtn!.addEventListener('click', () => {
+        this.copyToClipboard(this.myEmail)
 
-				if (this.timeout !== null) return
+        if (this.timeout !== null) return
 
-				this.isActive = true
-				this.changeStyle()
-				this.isActive = false
-				this.timeout = setTimeout(() => {
-					this.changeStyle()
-					this.timeout = null
-				}, 2500)
-			})
-		}
-	}
+        this.isActive = true
+        this.changeStyle()
+        this.isActive = false
+        this.timeout = setTimeout(() => {
+          this.changeStyle()
+          this.timeout = null
+        }, 2500)
+      })
+    }
+  }
 
-	customElements.define('email-to-clipboard', EmailToClipboard)
+  customElements.define('email-to-clipboard', EmailToClipboard)
 </script>

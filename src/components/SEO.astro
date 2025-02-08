@@ -19,9 +19,9 @@ const { title, description } = Astro.props
 
 <link rel="canonical" href={`${Astro.url.origin}/${defaultLang}`} />
 {
-	Object.entries(languageList).map(([key, lang]) => (
-		<link rel="alternate" href={`${Astro.url.origin}/${key}`} hreflang={lang.hreflang} />
-	))
+  Object.entries(languageList).map(([key, lang]) => (
+    <link rel="alternate" href={`${Astro.url.origin}/${key}`} hreflang={lang.hreflang} />
+  ))
 }
 
 <ClientRouter />

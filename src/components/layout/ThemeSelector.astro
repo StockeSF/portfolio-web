@@ -10,62 +10,62 @@ const listKeys = Object.keys(OPTIONS)
 ---
 
 <theme-container class="inline-block">
-	<Select
-		label={LABEL}
-		value={listKeys[0]}
-		options={Object.entries(OPTIONS).map(([theme, rest]) => ({
-			VALUE: theme,
-			...rest
-		}))}
-	>
-		<SunMoonIcon
-			slot="icon"
-			size={22}
-			class="absolute text-title transition-colors group-hover:text-label"
-		/>
-	</Select>
+  <Select
+    label={LABEL}
+    value={listKeys[0]}
+    options={Object.entries(OPTIONS).map(([theme, rest]) => ({
+      VALUE: theme,
+      ...rest,
+    }))}
+  >
+    <SunMoonIcon
+      slot="icon"
+      size={22}
+      class="absolute text-title transition-colors group-hover:text-label"
+    />
+  </Select>
 </theme-container>
 
 <script>
-	import { getColorScheme, loadTheme, STORAGEKEY } from '@/utils/theme-provider'
+  import { getColorScheme, loadTheme, STORAGEKEY } from '@/utils/theme-provider'
 
-	class ThemeContainer extends HTMLElement {
-		select: HTMLSelectElement | null
-		options: NodeListOf<HTMLOptionElement> | null
-		storagedTheme: string | null
+  class ThemeContainer extends HTMLElement {
+    select: HTMLSelectElement | null
+    options: NodeListOf<HTMLOptionElement> | null
+    storagedTheme: string | null
 
-		constructor() {
-			super()
+    constructor() {
+      super()
 
-			this.select = this.querySelector('select')
-			this.options = this.querySelectorAll('option')
+      this.select = this.querySelector('select')
+      this.options = this.querySelectorAll('option')
 
-			if (!localStorage.getItem(STORAGEKEY)) {
-				const userTheme = getColorScheme()
-				loadTheme(userTheme)
-			}
+      if (!localStorage.getItem(STORAGEKEY)) {
+        const userTheme = getColorScheme()
+        loadTheme(userTheme)
+      }
 
-			this.storagedTheme = localStorage.getItem(STORAGEKEY)
+      this.storagedTheme = localStorage.getItem(STORAGEKEY)
 
-			this.select?.addEventListener('change', (e) => {
-				if (e.currentTarget instanceof HTMLSelectElement) {
-					loadTheme(e.currentTarget.value)
-				}
-			})
-		}
+      this.select?.addEventListener('change', (e) => {
+        if (e.currentTarget instanceof HTMLSelectElement) {
+          loadTheme(e.currentTarget.value)
+        }
+      })
+    }
 
-		connectedCallback() {
-			let action = false
+    connectedCallback() {
+      let action = false
 
-			this.options?.forEach((op) => {
-				action = false
-				loadTheme(this.storagedTheme)
+      this.options?.forEach((op) => {
+        action = false
+        loadTheme(this.storagedTheme)
 
-				if (!op.selected && op.value === this.storagedTheme) action = true
-				op.selected = action
-			})
-		}
-	}
+        if (!op.selected && op.value === this.storagedTheme) action = true
+        op.selected = action
+      })
+    }
+  }
 
-	customElements.define('theme-container', ThemeContainer)
+  customElements.define('theme-container', ThemeContainer)
 </script>

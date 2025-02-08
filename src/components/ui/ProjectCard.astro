@@ -12,85 +12,85 @@ import CodeIcon from '@icons/code.svg'
 import ArrowURIcon from '@icons/arrow-up-right.svg'
 
 interface Props {
-	ITEM: HomeLangProjectsListItem
-	IMG: ImageMetadata
+  ITEM: HomeLangProjectsListItem
+  IMG: ImageMetadata
 }
 
 const { ITEM, IMG } = Astro.props
 ---
 
 <Card as="li" class="embla__slide p-2" type="y">
-	<Fragment slot="header">{ITEM.CATEGORY}</Fragment>
+  <Fragment slot="header">{ITEM.CATEGORY}</Fragment>
 
-	<article>
-		<header class="grid grid-cols-6">
-			<span class="col-span-5 flex items-center gap-2 text-title">
-				<CodeIcon size={22} />
+  <article>
+    <header class="grid grid-cols-6">
+      <span class="col-span-5 flex items-center gap-2 text-title">
+        <CodeIcon size={22} />
 
-				{
-					typeof ITEM.LINKS.PAGE !== 'undefined' ? (
-						<a
-							href={ITEM.LINKS.PAGE.URL}
-							class="group/title inline-flex items-center gap-1 hover:text-accent"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<span class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md lg:-inset-x-4 lg:block" />
+        {
+          typeof ITEM.LINKS.PAGE !== 'undefined' ? (
+            <a
+              href={ITEM.LINKS.PAGE.URL}
+              class="group/title inline-flex items-center gap-1 hover:text-accent"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md lg:-inset-x-4 lg:block" />
 
-							<h3 class="text-base font-bold tracking-wide transition-colors sm:text-lg">
-								{ITEM.TITLE}
-							</h3>
+              <h3 class="text-base font-bold tracking-wide transition-colors sm:text-lg">
+                {ITEM.TITLE}
+              </h3>
 
-							<ArrowURIcon
-								size={22}
-								class="text-accent transition-transform group-hover/title:-translate-y-0.5 group-hover/title:translate-x-1"
-							/>
-						</a>
-					) : (
-						<span class="inline-flex items-center gap-1">
-							<h3 class="text-lg font-bold tracking-wide transition-colors">{ITEM.TITLE}</h3>
-						</span>
-					)
-				}
-			</span>
+              <ArrowURIcon
+                size={22}
+                class="text-accent transition-transform group-hover/title:-translate-y-0.5 group-hover/title:translate-x-1"
+              />
+            </a>
+          ) : (
+            <span class="inline-flex items-center gap-1">
+              <h3 class="text-lg font-bold tracking-wide transition-colors">{ITEM.TITLE}</h3>
+            </span>
+          )
+        }
+      </span>
 
-			{
-				typeof ITEM.LINKS.GITHUB !== 'undefined' && (
-					<div class="z-50 col-span-1 place-self-center">
-						<a
-							href={ITEM.LINKS.GITHUB.URL}
-							class="text-title opacity-80 transition-all hover:scale-110 hover:opacity-100"
-							aria-label={ITEM.LINKS.GITHUB.LABEL}
-							title={ITEM.LINKS.GITHUB.LABEL}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Icon name="github" size={26} />
-						</a>
-					</div>
-				)
-			}
-		</header>
+      {
+        typeof ITEM.LINKS.GITHUB !== 'undefined' && (
+          <div class="z-50 col-span-1 place-self-center">
+            <a
+              href={ITEM.LINKS.GITHUB.URL}
+              class="text-title opacity-80 transition-all hover:scale-110 hover:opacity-100"
+              aria-label={ITEM.LINKS.GITHUB.LABEL}
+              title={ITEM.LINKS.GITHUB.LABEL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="github" size={26} />
+            </a>
+          </div>
+        )
+      }
+    </header>
 
-		<p class="my-3 text-sm font-medium leading-normal text-text">{ITEM.DESC}</p>
+    <p class="my-3 text-sm font-medium leading-normal text-text">{ITEM.DESC}</p>
 
-		<ul class="flex flex-wrap justify-center gap-1.5">
-			{
-				ITEM.PILLS.map(({ LABEL, ICON }) => (
-					<Pill as="li" label={LABEL} icon={`knowledge/${ICON}`} border={false} />
-				))
-			}
-		</ul>
-	</article>
+    <ul class="flex flex-wrap justify-center gap-1.5">
+      {
+        ITEM.PILLS.map(({ LABEL, ICON }) => (
+          <Pill as="li" label={LABEL} icon={`knowledge/${ICON}`} border={false} />
+        ))
+      }
+    </ul>
+  </article>
 
-	<Picture
-		src={IMG}
-		formats={['avif', 'webp']}
-		pictureAttributes={{ class: 'inline-block w-full max-h-[200px]' }}
-		class="inline-block aspect-video size-full rounded-xl border border-text"
-		loading="lazy"
-		width={400}
-		height={250}
-		alt={ITEM.IMG.ALTIMG}
-	/>
+  <Picture
+    src={IMG}
+    formats={['avif', 'webp']}
+    pictureAttributes={{ class: 'inline-block w-full max-h-[200px]' }}
+    class="inline-block aspect-video size-full rounded-xl border border-text"
+    loading="lazy"
+    width={400}
+    height={250}
+    alt={ITEM.IMG.ALTIMG}
+  />
 </Card>

@@ -1,9 +1,17 @@
 {
-	"useTabs": true,
-	"singleQuote": true,
-	"tabWidth": 2,
-	"trailingComma": "none",
-	"semi": false,
-	"printWidth": 100,
-	"plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+  "useTabs": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "semi": false,
+  "printWidth": 100,
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": [".*", "*.json"],
+      "options": {
+        "useTabs": false
+      }
+    }
+  ]
 }
