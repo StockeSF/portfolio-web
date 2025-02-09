@@ -85,11 +85,11 @@ const { ITEM, IMG } = Astro.props
   <Picture
     src={IMG}
     formats={['avif', 'webp']}
-    pictureAttributes={{ class: 'inline-block w-full max-h-[200px]' }}
+    pictureAttributes={{ class: 'inline-block w-full min-h-[210px]' }}
     class="inline-block aspect-video size-full rounded-xl border border-text"
     loading="lazy"
     width={400}
-    height={250}
+    height={300}
     alt={ITEM.IMG.ALTIMG}
   />
 </Card>
