@@ -1,5 +1,4 @@
 import globals from 'globals'
-import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import neostandard from 'neostandard'
 import eslintPluginAstro from 'eslint-plugin-astro'
@@ -11,7 +10,6 @@ export default [
   ...neostandard(),
   eslintPluginPrettierRecommended,
   ...eslintPluginAstro.configs.recommended,
-  pluginJs.configs.recommended,
   { files: ['**/*.{js,mjs,cjs,ts,astro}'] },
   {
     languageOptions: {
@@ -23,12 +21,17 @@ export default [
     },
   },
   {
-    ignores: ['.astro/**/*.*'],
     files: ['**/*.astro', '**/*.js', '**/*.jsx'],
     rules: {
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
       '@stylistic/jsx-indent': 'off',
       '@stylistic/space-before-function-paren': 'off',
+    },
+  },
+  {
+    files: ['**/*.astro', '**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   {
@@ -41,5 +44,8 @@ export default [
       '@stylistic/jsx-closing-bracket-location': 'off',
       '@stylistic/multiline-ternary': 'off',
     },
+  },
+  {
+    ignores: ['.astro/**/*.*', '.netlify/**/*.*', '.vscode/**/*.*'],
   },
 ]
