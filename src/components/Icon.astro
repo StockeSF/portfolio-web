@@ -1,0 +1,31 @@
+---
+import type { ImageMetadata } from 'astro'
+
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'svg'> {
+  name: string
+  size?: number | string
+}
+
+const { name = '', size, ...rest } = Astro.props
+let { width, height } = Astro.props
+
+const basePath = '/src/assets/icons/'
+
+const ICONS = import.meta.glob<{ default: ImageMetadata }>('src/assets/icons/**/*.svg', {
+  eager: true,
+})
+
+if (size) {
+  width = size
+  height = size
+}
+
+const Element = ICONS[`${basePath}${name}.svg`].default as ((_props: unknown) => any) &
+  ImageMetadata
+
+if (!Element) throw new Error(`Icon: ${name} doesn't exist in parent: ${basePath}`)
+---
+
+<Element {width} {height} {...rest} />

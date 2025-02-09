@@ -1,7 +1,7 @@
 ---
 import type { HomeLangEducationListItem } from '@/types/i18n.type'
 
-import { Icon } from 'astro-icon/components'
+import Icon from '@comp/Icon.astro'
 
 import Pill from '@comp/ui/Pill.astro'
 
@@ -18,7 +18,7 @@ const { ICON, TITLE, SUBTITLE, TIME, LATEST = false } = ITEM
   <span
     class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-accent ring-8 ring-accent/25"
   >
-    <Icon name={ICON} size={18} class="text-title" />
+    <Icon name={ICON} size={18} class="text-white" />
   </span>
 
   <h3 class="flex items-center text-lg font-semibold text-title">

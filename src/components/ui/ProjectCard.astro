@@ -3,13 +3,11 @@ import type { ImageMetadata } from 'astro'
 import type { HomeLangProjectsListItem } from '@/types/i18n.type'
 
 import { Picture } from 'astro:assets'
-import { Icon } from 'astro-icon/components'
+
+import Icon from '@comp/Icon.astro'
 
 import Card from '@comp/ui/Card.astro'
 import Pill from '@comp/ui/Pill.astro'
-
-import CodeIcon from '@icons/code.svg'
-import ArrowURIcon from '@icons/arrow-up-right.svg'
 
 interface Props {
   ITEM: HomeLangProjectsListItem
@@ -25,7 +23,7 @@ const { ITEM, IMG } = Astro.props
   <article>
     <header class="grid grid-cols-6">
       <span class="col-span-5 flex items-center gap-2 text-title">
-        <CodeIcon size={22} />
+        <Icon name="code" size={22} color="currentColor" />
 
         {
           typeof ITEM.LINKS.PAGE !== 'undefined' ? (
@@ -41,7 +39,8 @@ const { ITEM, IMG } = Astro.props
                 {ITEM.TITLE}
               </h3>
 
-              <ArrowURIcon
+              <Icon
+                name="arrow-up-right"
                 size={22}
                 class="text-accent transition-transform group-hover/title:-translate-y-0.5 group-hover/title:translate-x-1"
               />
@@ -65,7 +64,7 @@ const { ITEM, IMG } = Astro.props
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon name="github" size={26} />
+              <Icon name="github" size={26} fill="currentColor" />
             </a>
           </div>
         )

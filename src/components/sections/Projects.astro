@@ -2,12 +2,11 @@
 import type { ImageMetadata } from 'astro'
 import type { I18NSection, HomeLangProjects } from '@/types/i18n.type'
 
+import SectionLayout from '@/layouts/SectionLayout.astro'
+
 import ProjectCard from '@comp/ui/ProjectCard.astro'
 
-import ChevronLIcon from '@icons/chevron-left.svg'
-import ChevronRIcon from '@icons/chevron-right.svg'
-
-import SectionLayout from '@/layouts/SectionLayout.astro'
+import Icon from '@comp/Icon.astro'
 
 type Props = I18NSection<HomeLangProjects>
 
@@ -46,12 +45,12 @@ const getIMG = (file: string) => {
     <button
       class="embla__prev ms-3 mt-6 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
     >
-      <ChevronLIcon size={26} />
+      <Icon name="chevron-left" size={26} />
     </button>
     <button
       class="embla__next ms-3 rounded-full border border-text p-1 text-title transition-colors hover:bg-accent/40"
     >
-      <ChevronRIcon size={26} />
+      <Icon name="chevron-right" size={26} />
     </button>
   </div>
 </SectionLayout>

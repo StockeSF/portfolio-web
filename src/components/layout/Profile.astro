@@ -2,10 +2,10 @@
 import type { I18NSection, LayoutLangProfile } from '@/types/i18n.type'
 
 import { Picture } from 'astro:assets'
-import { Icon } from 'astro-icon/components'
 
 import photos from '@/assets/photo_1.jpg'
-import LocationIcon from '@icons/current-location.svg'
+
+import Icon from '@comp/Icon.astro'
 
 import ThemeSelector from '@comp/layout/ThemeSelector.astro'
 import LangSelector from '@comp/layout/LangSelector.astro'
@@ -41,7 +41,7 @@ const { LANG } = Astro.props
 
     <div class="flex flex-col gap-1.5">
       <div class="mt-0.5 inline-flex items-center gap-2 text-sm font-medium text-text">
-        <LocationIcon size={16} />
+        <Icon name="current-location" size={16} />
         {LANG.LOCATION.join(', ')}.
       </div>
 
@@ -59,7 +59,7 @@ const { LANG } = Astro.props
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon name={ICON} size={26} />
+                <Icon name={ICON} size={26} stroke="currentColor" />
               </a>
             </li>
           ))

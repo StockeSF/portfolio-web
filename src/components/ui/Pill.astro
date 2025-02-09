@@ -1,7 +1,7 @@
 ---
 import type { HTMLTag, Polymorphic } from 'astro/types'
 
-import { Icon } from 'astro-icon/components'
+import Icon from '@comp/Icon.astro'
 
 type Props<Tag extends HTMLTag> = Polymorphic<{
   as: Tag
@@ -21,6 +21,10 @@ const { as: Tag, label, class: className, icon, border = true } = Astro.props
     { 'border border-accent': border === true },
   ]}
 >
-  {typeof icon !== 'undefined' && <Icon name={icon} size={16} />}
+  {
+    typeof icon !== 'undefined' && (
+      <Icon name={icon} color="currentColor" fill="currentColor" size={16} />
+    )
+  }
   {label}
 </Tag>
