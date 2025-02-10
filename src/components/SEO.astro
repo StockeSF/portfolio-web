@@ -3,8 +3,6 @@ import type { SEOProps as Props } from '@/types/layouts.type'
 
 import { languageList, defaultLang } from '@/utils/lang-selector'
 
-import { ClientRouter } from 'astro:transitions'
-
 import inter from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
 
 const { title, description } = Astro.props
@@ -23,8 +21,6 @@ const { title, description } = Astro.props
     <link rel="alternate" href={`${Astro.url.origin}/${key}`} hreflang={lang.hreflang} />
   ))
 }
-
-<ClientRouter />
 
 <!-- Facebook Meta Tags -->
 <meta property="og:url" content={Astro.url} />
