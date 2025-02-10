@@ -31,7 +31,7 @@ const getIMG = (file: string) => {
 <SectionLayout id={LANG.ID} title={LANG.TITLE} class="overflow-hidden">
   <div class="embla w-full">
     <div class="embla__viewport">
-      <ol class="embla__container group/item lg:mx-4 lg:space-x-4">
+      <ol class="embla__container group/item lg:ms-4">
         {
           LANG.LIST.map((ITEM) => {
             const IMG = getIMG(ITEM.IMG.FILE)
@@ -60,7 +60,7 @@ const getIMG = (file: string) => {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 90%;
-    grid-column-gap: 36px;
+    grid-column-gap: 48px;
   }
 
   @media screen and (min-width: 640px) {
@@ -71,7 +71,7 @@ const getIMG = (file: string) => {
 
   @media screen and (min-width: 768px) {
     .embla__container {
-      grid-auto-columns: 45%;
+      grid-auto-columns: 50%;
     }
   }
 </style>
