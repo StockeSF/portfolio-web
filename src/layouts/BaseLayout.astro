@@ -6,8 +6,8 @@ import { labels } from '@/i18n/layout/config'
 
 import '@fontsource-variable/inter'
 
-import { Picture } from 'astro:assets'
-import banner from '@/assets/banner.png'
+import { Image } from 'astro:assets'
+import banner from '@/assets/banner.webp'
 
 import Seo from '@comp/SEO.astro'
 
@@ -25,15 +25,15 @@ const { PROF, FOOTER } = langSelector({ currentLocale, labels })
     <Seo {...Astro.props} />
   </head>
   <body class="mx-auto grid min-h-screen max-w-screen-2xl gap-12 lg:grid-cols-6 xl:gap-24">
-    <Picture
-      src={banner}
-      formats={['webp']}
-      quality={100}
-      fetchpriority="high"
-      pictureAttributes={{ class: '-z-10 size-full fixed grid -right-6 bottom-0' }}
-      class="z-10 h-full w-[40%] translate-x-6 place-self-end object-cover opacity-15 blur-sm grayscale"
-      alt=""
-    />
+    <div class="fixed -bottom-6 -right-6 -z-10 grid size-full">
+      <Image
+        src={banner}
+        fetchpriority="high"
+        loading="eager"
+        class="z-10 h-full w-full translate-x-12 translate-y-12 place-self-end object-cover opacity-15 blur-sm grayscale md:translate-x-24 md:translate-y-24 lg:w-2/5 lg:translate-x-4 lg:translate-y-4"
+        alt=""
+      />
+    </div>
 
     <Profile LANG={PROF} />
 
